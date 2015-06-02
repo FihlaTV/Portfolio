@@ -1,0 +1,73 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M512 128c-282.752 0-512 379.008-512 379.008s229.248 388.992 512 388.992 512-388.992 512-388.992-229.248-379.008-512-379.008zM512 768c-141.376 0-256-114.624-256-256s114.624-256 256-256 256 114.624 256 256-114.624 256-256 256zM384 512c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"tags": [
+					"eye",
+					"views"
+				],
+				"grid": 16
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 1,
+				"id": 0,
+				"prevSize": 32,
+				"name": "eye",
+				"code": 58880
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 0
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			}
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 4473924,
+			"bgColor": 16777215,
+			"classSelector": ".icon",
+			"columns": 16,
+			"margin": 16,
+			"height": 32,
+			"autoHost": true
+		},
+		"historySize": 100,
+		"showCodes": false,
+		"quickUsageToken": {
+			"UntitledProject": "NmZjYmEwZmUwNjdlM2IwMWE5MDM4YjUyN2E5ZGIzODYjMSMxNDMyMTc3NDIxIyMj"
+		},
+		"imageHostingName": false
+	}
+}

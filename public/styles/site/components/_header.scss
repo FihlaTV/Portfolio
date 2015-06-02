@@ -10,6 +10,7 @@ header{
   border-bottom:3px solid $color-secondary;  
   width:100%;
   z-index: 100;
+  background-color:$color-primary;
   nav{
 	.logo{
 	  display:none;
@@ -62,13 +63,13 @@ header{
 		  &:before{
 			transform:rotate(45deg);
 			top:.08rem;
-			background-color:white;
+			background-color:$color-white;
 			
 		  }
 		  &:after{
 			transform:rotate(-45deg);
 			bottom:-.4rem;
-			background-color:white;
+			background-color:$color-white;
 		  }
 		}
 	  }

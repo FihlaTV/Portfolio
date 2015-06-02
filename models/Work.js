@@ -18,8 +18,10 @@ Work.add({
 	name: { type: String, required: true },
 	client: { type: String},
 	company: { type: String},
-	role: { type: String},
+	roles: { type: Types.Relationship, ref: 'Role', many: true},
 	image: { type: Types.CloudinaryImage },
+	technologies: {type: Types.Relationship, ref: 'Technology', many: true},
+	link: {type: Types.Url},
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }

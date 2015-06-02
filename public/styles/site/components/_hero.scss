@@ -1,9 +1,15 @@
 .hero{
   //background-size:cover;
   height:100vh;
-  position:relative;
-  top:-3px;
-  border-bottom:4px solid $color-secondary;
+  &:after{
+	content:' ';
+	position:relative;
+	display:block;
+	top:-4px;
+	width:100%;
+	background-color:$color-secondary;
+	height:4px;
+  }
   .hero-content{
 	&:before{
 	  content:' ';
@@ -11,7 +17,7 @@
 	  width:99vw;
 	}
 	h1{
-	  font-size:4rem;
+	  font-size:5rem;
 	  font-weight:bold;
 	}
 	.spacer{

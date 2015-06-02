@@ -8,6 +8,8 @@
 	</div>
 	
 </section>
-<section class="work">
- <!--DO this in angular - make work Model-->
+<section class="work" id="Work">
+	{{#each data.work}}
+		{{> work this}}
+	{{/each}}
 </section>
