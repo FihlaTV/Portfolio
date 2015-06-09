@@ -11,19 +11,7 @@ body {
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -32,8 +20,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block; }
 
 body {
@@ -45,8 +32,7 @@ ol, ul {
 blockquote, q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
 
@@ -61,7 +47,7 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -71,8 +57,7 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  button:hover,
-  button:focus {
+  button:hover, button:focus {
     background-color: black;
     color: #fff; }
   button:disabled {
@@ -85,10 +70,8 @@ fieldset {
   margin: 0 0 0.75rem;
   padding: 1.5rem; }
 
-input,
-label,
-select {
-  font-family: "Noto Sans", sans-serif;
+input, label, select {
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1rem; }
 
 label {
@@ -99,41 +82,35 @@ label {
   label abbr {
     display: none; }
 
-input,
-select[multiple=multiple] {
+input, select[multiple=multiple] {
   background-color: #0c1b24;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   display: block;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   margin-bottom: 0.75rem;
   padding: 0.5rem;
   transition: border-color;
   width: 100%; }
-  input:hover,
-  select[multiple=multiple]:hover {
+  input:hover, select[multiple=multiple]:hover {
     border-color: #c4c4c4; }
-  input:focus,
-  select[multiple=multiple]:focus {
+  input:focus, select[multiple=multiple]:focus {
     border-color: #271007;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(17, 7, 3, 0.7);
     outline: none; }
-  input:disabled,
-  select[multiple=multiple]:disabled {
+  input:disabled, select[multiple=multiple]:disabled {
     background-color: #040a0d;
     cursor: not-allowed; }
-    input:disabled:hover,
-    select[multiple=multiple]:disabled:hover {
+    input:disabled:hover, select[multiple=multiple]:disabled:hover {
       border: 1px solid #ddd; }
 
 textarea {
   resize: vertical; }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   display: inline;
   margin-right: 0.375rem; }
 
@@ -148,18 +125,13 @@ select {
 
 body {
   color: #bb9b74;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Noto Sans", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans', sans-serif;
   line-height: 1.2;
   margin: 0 0 0.75rem; }
 
@@ -182,12 +154,9 @@ a {
   color: #271007;
   text-decoration: none;
   transition: color 0.1s linear; }
-  a:active,
-  a:focus,
-  a:hover {
+  a:active, a:focus, a:hover {
     color: black; }
-  a:active,
-  a:focus {
+  a:active, a:focus {
     outline: none; }
 
 hr {
@@ -203,8 +172,8 @@ img {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?-v567g0");
-  src: url("fonts/icomoon.eot?#iefix-v567g0") format("embedded-opentype"), url("fonts/icomoon.ttf?-v567g0") format("truetype"), url("fonts/icomoon.woff?-v567g0") format("woff"), url("fonts/icomoon.svg?-v567g0#icomoon") format("svg");
+  src: url('/fonts/icomoon.eot?7wirvd');
+  src: url('/fonts/icomoon.eot?#iefix7wirvd') format('embedded-opentype'), url('/fonts/icomoon.ttf?7wirvd') format('truetype'), url('/fonts/icomoon.woff?7wirvd') format('woff'), url('/fonts/icomoon.svg?7wirvd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -220,8 +189,17 @@ img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-eye:before {
-  content: "\e600"; }
+.icon-eye2:before {
+  content: "\e601"; }
+
+.icon-enlarge2:before {
+  content: "\e98b"; }
+
+.icon-arrow-up-right2:before {
+  content: "\ea3b"; }
+
+.icon-cross:before {
+  content: "\ea0f"; }
 
 .hero {
   height: 100vh; }
@@ -293,12 +271,12 @@ header {
       display: block;
       margin: 0 auto;
       bottom: -1.6875rem;
-      transition: all 0.5s ease-in-out;
+      transition: all .5s ease-in-out;
       border-radius: 2px;
       cursor: pointer; }
       header nav .menu .menu-button:before {
         content: '';
-        transition: all 0.5s ease-in-out;
+        transition: all .5s ease-in-out;
         border-radius: 2px;
         position: absolute;
         height: 0.375rem;
@@ -307,7 +285,7 @@ header {
         top: -1rem; }
       header nav .menu .menu-button:after {
         content: '';
-        transition: all 0.5s ease-in-out;
+        transition: all .5s ease-in-out;
         border-radius: 2px;
         position: absolute;
         height: 0.375rem;
@@ -372,10 +350,26 @@ header {
     .work .work-tile:hover .lead-content {
       z-index: 100;
       bottom: 0; }
-    .work .work-tile:hover .view span {
+    .work .work-tile:hover .view a {
       visibility: visible;
       opacity: 1; }
-
+  .work .work-tile.show-more {
+    opacity: 1;
+    overflow: visible; }
+    .work .work-tile.show-more .lead-content {
+      background-color: black;
+      opacity: 1;
+      bottom: 0;
+      height: 100%;
+      padding: 0;
+      z-index: 10; }
+      .work .work-tile.show-more .lead-content .close {
+        display: inline-block; }
+      .work .work-tile.show-more .lead-content .read-more {
+        display: none; }
+      .work .work-tile.show-more .lead-content .description {
+        visibility: visible;
+        opacity: 1; }
 .work .view {
   width: 100%;
   height: 20px;
@@ -385,20 +379,20 @@ header {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center; }
-  .work .view span {
+  .work .view a {
     font-size: 1.5rem;
     background: rgba(0, 0, 0, 0.94);
     padding: 5px 15px;
     border-radius: 1rem;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.3s ease-in-out; }
-    .work .view span:hover {
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    color: #bb9b74; }
+    .work .view a:hover {
       color: #fff;
       cursor: pointer; }
-
 .work .lead-content {
-  padding: 20px 20px 0;
   background-color: rgba(0, 0, 0, 0.85);
   display: block;
   height: 100px;
@@ -406,7 +400,19 @@ header {
   bottom: -120px;
   width: 100%;
   z-index: -10;
-  transition: bottom 0.3s ease-in-out; }
+  transition: bottom 0.3s ease-in-out, height 0.3s ease-in-out; }
+  .work .lead-content .read-more, .work .lead-content .close {
+    position: absolute;
+    right: 20px;
+    color: #fff; }
+    .work .lead-content .read-more:hover, .work .lead-content .close:hover {
+      cursor: pointer; }
+    .work .lead-content .read-more i, .work .lead-content .close i {
+      margin-left: 4px; }
+  .work .lead-content .close {
+    display: none; }
+  .work .lead-content .container {
+    padding: 20px 20px 0; }
   .work .lead-content .name {
     font-weight: bold;
     line-height: 1.5;
@@ -422,3 +428,20 @@ header {
       color: #fff; }
     .work .lead-content .roles .role:last-child:after {
       content: ''; }
+  .work .lead-content .description {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; }
+    .work .lead-content .description h4 {
+      color: #fff;
+      margin-top: 30px; }
+    .work .lead-content .description ul {
+      padding-left: 30px; }
+      .work .lead-content .description ul li {
+        list-style-type: disc; }
+@media (max-width: 1024px) {
+  .work .work-tile {
+    width: 50%; } }
+@media (max-width: 768px) {
+  .work .work-tile {
+    width: 100%; } }

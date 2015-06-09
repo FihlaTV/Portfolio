@@ -8,6 +8,16 @@
 	position:relative;
 	z-index:2;
 	overflow:hidden;
+	//&.show-previous{
+	//  opacity:0;
+	//  visibility: hidden;
+	//  &:hover{
+	//	opacity:0;
+	//	.lead-content,.view{
+	//	  display: none;
+	//	}
+	//  }
+	//}
 	img{
 	  float:left;
 	  width:100%;
@@ -20,9 +30,31 @@
 		bottom:0;
 	  }
 	  .view{
-		span{
+		a{
 		  visibility: visible;
 		  opacity:1;
+		}
+	  }
+	}
+	&.show-more{
+	  opacity: 1;
+	  overflow:visible; 
+	  .lead-content{
+		background-color:black;
+		opacity:1;
+		bottom:0;
+		height:100%;
+		padding:0;
+		z-index:10;
+		.close{
+		  display:inline-block;
+		}
+		.read-more{
+		  display:none;
+		}
+		.description{
+		  visibility: visible;
+		  opacity: 1;
 		}
 	  }
 	}
@@ -36,7 +68,7 @@
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 	text-align:center;
-	span{
+	a{
 	  font-size:1.5rem;
 	  background:rgba(0,0, 0, 0.94);
 	  padding:5px 15px;
@@ -44,6 +76,8 @@
 	  visibility: hidden;
 	  opacity:0;
 	  transition: all 0.3s ease-in-out;
+	  display:inline-block;
+	  color:$color-secondary;
 	  //i{
 		//font-size:2rem;
 	  //}
@@ -54,15 +88,31 @@
 	}
   }
   .lead-content{
-	padding:20px 20px 0;
-	background-color: rgba(0,0, 0, 0.85); 
+	background-color: rgba(0,0, 0, 0.85);
 	display: block;
 	height:100px;
 	position:absolute;
 	bottom:-120px;
 	width:100%;
 	z-index: -10;
-	transition: bottom 0.3s ease-in-out;
+	transition: bottom 0.3s ease-in-out, height 0.3s ease-in-out; 
+	.read-more, .close{
+	  position:absolute;
+	  right:20px;
+	  color:$color-white;
+	  &:hover{
+		cursor:pointer;	
+	  }
+	  i{
+		margin-left:4px;
+	  }
+	}
+	.close{
+	  display:none;
+	}
+	.container{
+	  padding:20px 20px 0;  
+	}
 	.name{
 	  font-weight: bold;
 	  line-height:1.5;
@@ -86,7 +136,31 @@
 		}
 	  }
 	}
+	.description{
+	  visibility: hidden;
+	  opacity: 0;
+	  transition: all 0.3s ease-in-out;
+	  h4{
+		color:$color-white;
+		margin-top:30px;
+	  }
+	  ul{
+		padding-left: 30px;
+		li{
+		  list-style-type: disc;
+		}
+	  }
+	}
   }
-  
-  
+
+  @media (max-width: $breakpoint-tablet){
+	.work-tile{
+	  width:50% 
+	}
+  }
+  @media (max-width: $breakpoint-tablet-small){
+	.work-tile{
+	  width:100%;
+	}
+  }
 }
