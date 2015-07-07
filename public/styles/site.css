@@ -332,6 +332,15 @@ header {
         .mobile-menu ul li a:hover {
           color: white; }
 
+.work:after {
+  clear: both;
+  content: ' ';
+  position: relative;
+  display: block;
+  top: -4px;
+  width: 100%;
+  background-color: #bb9b74;
+  height: 4px; }
 .work .work-tile {
   width: 33.333%;
   display: inline-block;
@@ -367,7 +376,7 @@ header {
         display: inline-block; }
       .work .work-tile.show-more .lead-content .read-more {
         display: none; }
-      .work .work-tile.show-more .lead-content .description {
+      .work .work-tile.show-more .lead-content .description, .work .work-tile.show-more .lead-content .company {
         visibility: visible;
         opacity: 1; }
 .work .view {
@@ -419,7 +428,7 @@ header {
     margin-bottom: 5px;
     text-transform: uppercase;
     display: inline-block;
-    border-bottom: solid 4px #fff; }
+    border-bottom: solid 4px #884c4c; }
   .work .lead-content .roles .role {
     margin-right: 5px; }
     .work .lead-content .roles .role:after {
@@ -439,9 +448,66 @@ header {
       padding-left: 30px; }
       .work .lead-content .description ul li {
         list-style-type: disc; }
+  .work .lead-content .company {
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    bottom: 15px;
+    visibility: hidden;
+    opacity: 0; }
+    .work .lead-content .company span {
+      color: #fff;
+      font-weight: bold; }
 @media (max-width: 1024px) {
   .work .work-tile {
     width: 50%; } }
 @media (max-width: 768px) {
   .work .work-tile {
     width: 100%; } }
+
+.about {
+  white-space: nowrap;
+  overflow: hidden; }
+  .about .about-panel {
+    padding: 3%;
+    width: 44%;
+    display: inline-block;
+    float: left; }
+    .about .about-panel p {
+      color: white; }
+    .about .about-panel ul {
+      padding-left: 30px; }
+      .about .about-panel ul li {
+        list-style-type: disc; }
+        .about .about-panel ul li a {
+          color: #884c4c; }
+          .about .about-panel ul li a:hover {
+            color: #fff; }
+  .about .contact-panel {
+    display: inline-block;
+    width: calc(44% - 2px);
+    border-left: solid 2px #bb9b74;
+    padding: 0 3%;
+    margin: 3% 0;
+    float: left;
+    min-height: 200px; }
+    .about .contact-panel input, .about .contact-panel textarea {
+      background: white;
+      width: 100%; }
+    .about .contact-panel p {
+      color: white; }
+    .about .contact-panel textarea {
+      padding: 10px;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 16px;
+      width: 96.5%;
+      border-radius: 4px; }
+    .about .contact-panel .invalid {
+      color: #c9302c;
+      display: block;
+      width: 100%;
+      margin: 0 0 6px 0;
+      position: relative;
+      top: -4px; }
+    .about .contact-panel .submit-button {
+      width: 100%;
+      background-color: #884c4c; }

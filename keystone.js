@@ -39,6 +39,12 @@ keystone.init({
 
 });
 
+//if in hosting environment, let's hook up openshift's connectionstring
+if(OPENSHIFT_MONGODB_DB_USERNAME){
+	var connectionString = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +  process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" + process.env.OPENSHIFT_MONGODB_DB_HOST + dbName;
+	keystone.set('mongo', connectionString);
+}
+
 // Load your project's Models
 
 keystone.import('models');

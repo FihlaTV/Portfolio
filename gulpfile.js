@@ -86,7 +86,7 @@ gulp.task('inject',function(){
 			]
 		}))
 		.pipe(gulp.dest('./templates/views/partials'));
-})
+});
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {

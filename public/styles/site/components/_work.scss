@@ -1,4 +1,14 @@
 .work{
+  &:after{
+	clear:both;
+	content:' ';
+	position:relative;
+	display:block;
+	top:-4px;
+	width:100%;
+	background-color:$color-secondary;
+	height:4px;
+  }
   .work-tile{
 	width:33.333%;
 	display:inline-block;
@@ -52,7 +62,7 @@
 		.read-more{
 		  display:none;
 		}
-		.description{
+		.description,.company{
 		  visibility: visible;
 		  opacity: 1;
 		}
@@ -119,7 +129,7 @@
 	  margin-bottom:5px;
 	  text-transform:uppercase;
 	  display: inline-block;
-	  border-bottom:solid 4px $color-white;
+	  border-bottom:solid 4px $color-primary-inverse;
 	}
 	.roles{
 	  .role{
@@ -149,6 +159,17 @@
 		li{
 		  list-style-type: disc;
 		}
+	  }
+	}
+	.company{
+	  transition: all 0.6s ease-in-out;
+	  position:absolute;
+	  bottom:15px;
+	  visibility: hidden;
+	  opacity: 0;
+	  span{
+		color:$color-white;
+		font-weight: bold;
 	  }
 	}
   }

@@ -8,11 +8,41 @@
 	</div>
 	
 </section>
-<section class="work" id="Work">
+<section class="work" id="work">
 	{{#each data.work}}
 		{{> work this}}
 	{{/each}}
 </section>
 <section class="about" id="about">
-	
-</section> 
+	<div class="about-panel">
+		<h2>About</h2>
+		<p>Trying to strike the balance of improving myself daily while never taking myself to seriously.</p>
+        <h4>Some (Older) Work</h4>
+        <ul>
+            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
+            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">Audio Waveforms/Player with WebAPI (resurrected?)</a></li>
+        </ul>
+    </div>
+	<div class="contact-panel" ng-controller="ContactController">
+        <h2>Contact</h2>
+        <form name="form" novalidate ng-show="!submitted">
+            <div class="input-field">
+                <input type="text" placeholder="Name" name="name" ng-model="contact.name" required>
+                <span class="invalid" ng-show="form.name.$error.required && form.name.$touched">* This field is required</span>
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="Email" name="email" ng-model="contact.email" required>
+                <span class="invalid" ng-show="form.email.$error.required && form.email.$touched">* This field is required</span>
+                <span class="invalid" ng-show="form.email.$error.email && form.email.$touched">* Not a valid email address</span>
+            </div>
+            <div class="input-field">
+                <textarea rows="4" placeholder="Message" name="message" ng-model="contact.message" required></textarea>
+                <span class="invalid" ng-show="form.message.$error.required && form.message.$touched">* This field is required</span>
+            </div>
+            <div class="input-field">
+                <button class="submit-button" ng-click="submit()">Submit</button>
+            </div>
+        </form>
+		<p ng-show="submitted">Your message has been sent! Thanks for reaching out.</p>
+    </div>
+</section>
