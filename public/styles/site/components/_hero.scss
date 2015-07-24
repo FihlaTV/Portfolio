@@ -1,6 +1,7 @@
 .hero{
   //background-size:cover;
   height:100vh;
+  overflow: hidden;
   &:after{
 	content:' ';
 	position:relative;
