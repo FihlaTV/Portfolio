@@ -1,7 +1,15 @@
 body {
   background-color: #0c1b24;
-  color: #bb9b74;
+  color: #bb9b74; }
+
+html {
   font-size: 1rem; }
+  @media (max-width: 768px) {
+    html {
+      font-size: 0.8rem !important; } }
+  @media (max-width: 480px) {
+    html {
+      font-size: 0.6rem !important; } }
 
 #footer {
   margin-top: 30px;
@@ -581,6 +589,6 @@ header {
         .about .contact-panel input, .about .contact-panel textarea {
           width: 97%; }
         .about .contact-panel textarea {
-          width: 93.5%; }
+          width: 92%; }
         .about .contact-panel .submit-button {
           width: 97%; } }
