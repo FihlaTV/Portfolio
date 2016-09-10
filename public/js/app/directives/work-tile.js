@@ -1,7 +1,7 @@
 /**
  * Created by manny on 5/22/15.
  */
-app.directive('workTile',	function ($rootScope, $log, browserWidth) {
+module.exports = function ($rootScope, $log, browserWidth) {
 	return {
 		restrict: 'A',
 		scope: true,
@@ -15,5 +15,4 @@ app.directive('workTile',	function ($rootScope, $log, browserWidth) {
 			};
 		}
 	}
-});
-
+};

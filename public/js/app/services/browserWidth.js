@@ -1,4 +1,4 @@
-app.factory("browserWidth", function ($window) {
+module.exports = function ($window) {
 	return {
 		/**
 		 * @Converts a JSON object to a querystring
@@ -12,12 +12,12 @@ app.factory("browserWidth", function ($window) {
 			return  width > 1024;
 		},
 		isTabletLarge:function(){
-			var width = this.getBrowserWidth(); 
-			return  width <= 1024 && width > 768;  
+			var width = this.getBrowserWidth();
+			return  width <= 1024 && width > 768;
 		},
 		isTabletPortrait:function(){
 			var width = this.getBrowserWidth();
 			return  width <= 768 && width > 480;
 		}
 	};
-});
+};
