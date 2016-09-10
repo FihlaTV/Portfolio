@@ -1,4 +1,4 @@
-app.controller('ContactController',	function ($rootScope, $log, $window, $scope, $http) {
+module.exports = function ($rootScope, $log, $window, $scope, $http) {
 	$scope.submit = function(){
 		if($scope.form.$invalid){
 			return;
@@ -8,7 +8,6 @@ app.controller('ContactController',	function ($rootScope, $log, $window, $scope,
 				$scope.submitted = true;
 			else
 				$scope.showErrorMessage = true;
-		})
-	};
-	
-});
+		});
+	}
+};

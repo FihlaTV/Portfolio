@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-	jshint = require('gulp-jshint'),
-	jshintReporter = require('jshint-stylish'),
+	// jshint = require('gulp-jshint'),
+	// jshintReporter = require('jshint-stylish'),
 	watch = require('gulp-watch'),
 	sass = require('gulp-sass'),
 	inject = require('gulp-inject'),
@@ -21,20 +21,20 @@ var paths = {
 
 
 // gulp lint
-gulp.task('lint', function(){
-	gulp.src(paths.src)
-		.pipe(jshint())
-		.pipe(jshint.reporter(jshintReporter));
-
-});
+// gulp.task('lint', function(){
+// 	gulp.src(paths.src)
+// 		.pipe(jshint())
+// 		.pipe(jshint.reporter(jshintReporter));
+//
+// });
 
 // gulp watcher for lint
-gulp.task('watch:lint', function () {
-	gulp.src(paths.src)
-		.pipe(watch())
-		.pipe(jshint())
-		.pipe(jshint.reporter(jshintReporter));
-});
+// gulp.task('watch:lint', function () {
+// 	gulp.src(paths.src)
+// 		.pipe(watch())
+// 		.pipe(jshint())
+// 		.pipe(jshint.reporter(jshintReporter));
+// });
 
 var port = 3010;
 gulp.task('run-server', function(){

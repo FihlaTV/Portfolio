@@ -1,7 +1,7 @@
 /**
  * Created by manny on 5/22/15.
  */
-app.directive('navigation',	function ($rootScope, $log, $window) {
+module.exports = function ($rootScope, $log, $window) {
 	return {
 		restrict: 'A',
 		scope: true,
@@ -18,9 +18,9 @@ app.directive('navigation',	function ($rootScope, $log, $window) {
 
 				scope.toggleMenu(function(){
 					// using jquery to animate
-					$('html, body').animate({ scrollTop: gotoY }, 800); 
+					$('html, body').animate({ scrollTop: gotoY }, 800);
 				});
 			};
 		}
-	}
-});
+	};
+};
