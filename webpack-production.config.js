@@ -7,12 +7,6 @@ module.exports = {
     },
     module: {
         loaders: [
-            {
-               test: /\.js$/,
-               include:[path.resolve(__dirname, 'app')],
-               loader: 'ng-annotate',
-               exclude: /node_modules/
-           },
            {
               test: /\.scss$/,
               //loader: ExtractTextPlugin.extract("style", "css!sass"),

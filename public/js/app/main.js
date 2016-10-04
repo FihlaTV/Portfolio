@@ -1,4 +1,4 @@
-require('!style!css!../../styles/site.css');
+require('../../styles/site.scss');
 
 require('jquery');
 require('angular');
