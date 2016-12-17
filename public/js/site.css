@@ -1,6 +1,8 @@
 body {
   background-color: #0c1b24;
   color: #bb9b74; }
+  body.light {
+    background-color: #fdfdfd; }
 
 html {
   font-size: 1rem; }
@@ -247,6 +249,8 @@ img {
     width: 100%;
     background-color: #bb9b74;
     height: 4px; }
+  .light .hero .hero-content .spacer {
+    border-bottom: 0.5rem solid #0c1b24; }
   .hero .hero-content {
     display: table-cell;
     vertical-align: middle;
@@ -286,10 +290,25 @@ header {
   width: 100%;
   z-index: 100;
   background-color: #0c1b24; }
+  .light header {
+    background-color: #fdfdfd;
+    border-bottom: 3px solid #0c1b24; }
+    .light header .menu {
+      border: solid 2px #0c1b24; }
+    .light header .menu-button {
+      background-color: #0c1b24; }
+      .light header .menu-button:before {
+        background-color: #0c1b24; }
+      .light header .menu-button:after {
+        background-color: #0c1b24; }
+      .light header .menu-button.close:before {
+        background-color: #0c1b24; }
+      .light header .menu-button.close:after {
+        background-color: #0c1b24; }
   header nav .logo {
     display: none;
     float: left; }
-  header nav .menu {
+  header .menu {
     height: 3.75rem;
     position: relative;
     top: 0.625rem;
@@ -298,46 +317,46 @@ header {
     border: solid 2px #bb9b74;
     border-radius: 8px;
     cursor: pointer; }
-    header nav .menu .menu-button {
+  header .menu-button {
+    content: '';
+    height: 0.375rem;
+    width: 3rem;
+    background-color: #bb9b74;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    bottom: -1.6875rem;
+    transition: all .5s ease-in-out;
+    border-radius: 2px;
+    cursor: pointer; }
+    header .menu-button:before {
       content: '';
+      transition: all .5s ease-in-out;
+      border-radius: 2px;
+      position: absolute;
       height: 0.375rem;
       width: 3rem;
       background-color: #bb9b74;
-      position: relative;
-      display: block;
-      margin: 0 auto;
-      bottom: -1.6875rem;
+      top: -1rem; }
+    header .menu-button:after {
+      content: '';
       transition: all .5s ease-in-out;
       border-radius: 2px;
-      cursor: pointer; }
-      header nav .menu .menu-button:before {
-        content: '';
-        transition: all .5s ease-in-out;
-        border-radius: 2px;
-        position: absolute;
-        height: 0.375rem;
-        width: 3rem;
-        background-color: #bb9b74;
-        top: -1rem; }
-      header nav .menu .menu-button:after {
-        content: '';
-        transition: all .5s ease-in-out;
-        border-radius: 2px;
-        position: absolute;
-        height: 0.375rem;
-        width: 3rem;
-        background-color: #bb9b74;
-        bottom: -1rem; }
-      header nav .menu .menu-button.close {
-        height: 0; }
-        header nav .menu .menu-button.close:before {
-          transform: rotate(45deg);
-          top: .08rem;
-          background-color: #fff; }
-        header nav .menu .menu-button.close:after {
-          transform: rotate(-45deg);
-          bottom: -.4rem;
-          background-color: #fff; }
+      position: absolute;
+      height: 0.375rem;
+      width: 3rem;
+      background-color: #bb9b74;
+      bottom: -1rem; }
+    header .menu-button.close {
+      height: 0; }
+      header .menu-button.close:before {
+        transform: rotate(45deg);
+        top: .08rem;
+        background-color: #fff; }
+      header .menu-button.close:after {
+        transform: rotate(-45deg);
+        bottom: -.4rem;
+        background-color: #fff; }
 
 .mobile-menu {
   background-size: cover;

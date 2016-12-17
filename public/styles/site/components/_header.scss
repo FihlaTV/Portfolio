@@ -7,73 +7,95 @@ header{
   position:fixed;
   top:0;
   height:$header-height;
-  border-bottom:3px solid $color-secondary;  
+  border-bottom:3px solid $color-secondary;
   width:100%;
   z-index: 100;
   background-color:$color-primary;
+  .light &{
+      background-color:$color-off-white;
+      border-bottom:3px solid $color-primary;
+      .menu{
+          border:solid 2px $color-primary;
+      }
+      .menu-button{
+          background-color:$color-primary;
+          &:before{
+              background-color:$color-primary;
+          }
+          &:after{
+              background-color:$color-primary;
+          }
+          &.close{
+            &:before{
+                background-color:$color-primary;
+            }
+            &:after{
+                background-color:$color-primary;
+            }
+        }
+      }
+  }
   nav{
 	.logo{
 	  display:none;
 	  float:left;
 	}
-	.menu{
-	  height:$menu-button-height;
-	  position:relative;
-	  top:($header-height - $menu-button-height)/(2);
-	  margin-left:20px;
-	  width:$menu-button-width;
-	  border:solid 2px $color-secondary;
-	  border-radius:8px;
-	  cursor: pointer;
-	  
-	  .menu-button{
-		content:'';
-		height:$line-height;
-		width: $line-width;
-		background-color:$color-secondary;
-		position:relative;
-		display: block;
-		margin:0 auto; 
-		bottom:-($menu-button-height/2) + ($line-height/2); 
-		transition: all .5s ease-in-out;
-		border-radius:2px;
-		cursor:pointer;
-		&:before{
-		  content:'';
-		  transition: all .5s ease-in-out;
-		  border-radius:2px;
-		  position:absolute;
-		  height:$line-height;
-		  width: $line-width;
-		  background-color:$color-secondary;
-		  top:-1rem;
-		}
-		&:after{
-		  content:'';
-		  transition: all .5s ease-in-out;
-		  border-radius:2px;
-		  position:absolute;
-		  height:$line-height;
-		  width: $line-width;
-		  background-color:$color-secondary;
-		  bottom:-1rem;
-		}
-		&.close{
-		  height:0;
-		  &:before{
-			transform:rotate(45deg);
-			top:.08rem;
-			background-color:$color-white;
-			
-		  }
-		  &:after{
-			transform:rotate(-45deg);
-			bottom:-.4rem;
-			background-color:$color-white;
-		  }
-		}
-	  }
-	  
-	}
+  }
+  .menu{
+    height:$menu-button-height;
+    position:relative;
+    top:($header-height - $menu-button-height)/(2);
+    margin-left:20px;
+    width:$menu-button-width;
+    border:solid 2px $color-secondary;
+    border-radius:8px;
+    cursor: pointer;
+  }
+  .menu-button{
+    content:'';
+    height:$line-height;
+    width: $line-width;
+    background-color:$color-secondary;
+    position:relative;
+    display: block;
+    margin:0 auto;
+    bottom:-($menu-button-height/2) + ($line-height/2);
+    transition: all .5s ease-in-out;
+    border-radius:2px;
+    cursor:pointer;
+    &:before{
+      content:'';
+      transition: all .5s ease-in-out;
+      border-radius:2px;
+      position:absolute;
+      height:$line-height;
+      width: $line-width;
+      background-color:$color-secondary;
+      top:-1rem;
+    }
+    &:after{
+      content:'';
+      transition: all .5s ease-in-out;
+      border-radius:2px;
+      position:absolute;
+      height:$line-height;
+      width: $line-width;
+      background-color:$color-secondary;
+      bottom:-1rem;
+    }
+    &.close{
+      height:0;
+      &:before{
+        transform:rotate(45deg);
+        top:.08rem;
+        background-color:$color-white;
+
+      }
+      &:after{
+        transform:rotate(-45deg);
+        bottom:-.4rem;
+        background-color:$color-white;
+      }
+    }
   }
 }

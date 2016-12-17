@@ -11,6 +11,13 @@
 	background-color:$color-secondary;
 	height:4px;
   }
+  .light &{
+      .hero-content{
+          .spacer{
+      	       border-bottom:.5rem solid $color-primary;
+           }
+      }
+  }
   .hero-content{
 	&:before{
 	  content:' ';
@@ -26,7 +33,6 @@
 	  border-bottom:.5rem solid white;
 	  text-align:center;
 	  margin:0 auto 1rem;
-	  
 	}
 	h3{
 	  color:$color-primary-inverse;
@@ -37,7 +43,7 @@
 		  content:'';
 		}
 		&:after{
-		  content:'+'; 
+		  content:'+';
 		  margin:0 8px;
 		  color:white;
 		}
