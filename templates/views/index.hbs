@@ -1,5 +1,5 @@
 {{!< default}}
-<section class="hero">
+<section class="hero" style="background-image:url({{data.home.backgroundImage.url}})">
 	<div class="hero-content">
 		<div class="logo"></div>
 		<h1>Emmanuel Nelson</h1>
@@ -9,14 +9,14 @@
 
 </section>
 <section class="work" id="work">
-	{{#each data.work}}
+	{{#each data.home.work}}
 		{{> work this}}
 	{{/each}}
 </section>
 <section class="section about" id="about">
 	<div class="panel about-panel">
 		<h2>About</h2>
-		<p>Trying to strike the balance of improving myself daily while never taking myself too seriously.</p>
+		{{{data.home.about}}}
         <h4>Some (Older) Work</h4>
         <ul>
             <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
