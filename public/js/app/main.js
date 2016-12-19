@@ -1,7 +1,7 @@
 require('../../styles/site.scss');
 
-require('jquery');
 require('angular');
+require('angular-scroll');
 require('angular-touch');
 require('underscore');
 require('./app.js');
