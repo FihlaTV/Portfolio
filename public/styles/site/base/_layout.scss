@@ -1,13 +1,13 @@
 body{
-  background-color:$color-primary;
+  background-color:$base-background-color;
   color:$color-secondary;
 }
 html{
   font-size:$base-font-size;
-  @media (max-width: $breakpoint-tablet-small){
+  @media (max-width: $bp-between){
 	font-size:$base-font-size*.8 !important;
   }
-  @media (max-width: $breakpoint-mobile){
+  @media (max-width: $bp-mobile){
 	font-size:$base-font-size*.6 !important;
   }
 }
@@ -16,4 +16,3 @@ html{
 	margin-top: 30px;
 	padding-top: 30px;
   }
-

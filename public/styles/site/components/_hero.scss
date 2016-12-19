@@ -1,15 +1,16 @@
 .hero{
-  //background-size:cover;
+  background-size:cover;
+  background-image: url('/images/background-two.jpg');
+  background-position: left center;
   height:100vh;
   overflow: hidden;
   &:after{
 	content:' ';
-	position:relative;
-	display:block;
-	top:-4px;
-	width:100%;
-	background-color:$color-secondary;
-	height:4px;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,0.55);
   }
   .hero-content{
 	&:before{
@@ -18,15 +19,15 @@
 	  width:99vw;
 	}
 	h1{
-	  font-size:5rem;
-	  font-weight:bold;
+	  font-size:px-to-rem(80px);
+      letter-spacing: -5px;
 	}
 	.spacer{
-	  width:6vw;
-	  border-bottom:.5rem solid white;
+	  width:px-to-rem(100px);
+	  border-bottom: px-to-rem(4px) solid white;
 	  text-align:center;
 	  margin:0 auto 1rem;
-	  
+
 	}
 	h3{
 	  color:$color-primary-inverse;
@@ -37,7 +38,7 @@
 		  content:'';
 		}
 		&:after{
-		  content:'+'; 
+		  content:'+';
 		  margin:0 8px;
 		  color:white;
 		}

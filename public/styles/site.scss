@@ -1,23 +1,8 @@
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
-
-@import "site/layout/variables";
-	
-// Site Styles
-// ===========
-
-// Add your own site style includes here
-@import "site/layout/layout";
-@import "site/layout/reset";
-@import "site/layout/buttons";
-@import "site/layout/forms";
-@import "site/layout/typography";
-@import "site/layout/fonts";
-
+@import "site/base/manifest";
 
 //components
-@import "site/components/hero";
-@import "site/components/header";
-@import "site/components/mobile-menu";
-@import "site/components/work";
-@import "site/components/about";
+@import "site/components/manifest";
+
+//pages

@@ -4,26 +4,26 @@
 		<div class="logo"></div>
 		<h1>Emmanuel Nelson</h1>
 		<div class="spacer"></div>
-		<h3><span>Front-End</span><span>Node</span><span>.NET Developer</span></h3> 
+		<h3><span>Front-End</span><span>Node</span><span>.NET Developer</span></h3>
 	</div>
-	
+
 </section>
 <section class="work" id="work">
 	{{#each data.work}}
 		{{> work this}}
 	{{/each}}
 </section>
-<section class="about" id="about">
-	<div class="about-panel">
+<section class="section about" id="about">
+	<div class="panel about-panel">
 		<h2>About</h2>
-		<p>Trying to strike the balance of improving myself daily while never taking myself to seriously.</p>
+		<p>Trying to strike the balance of improving myself daily while never taking myself too seriously.</p>
         <h4>Some (Older) Work</h4>
         <ul>
             <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
             <li><a href="https://github.com/manuelnelson/AudioLibraryJs">Audio Waveforms/Player with WebAPI</a></li>
         </ul>
     </div>
-	<div class="contact-panel" ng-controller="ContactController">
+	<div class="panel contact-panel" ng-controller="ContactController">
         <h2>Contact</h2>
         <form name="form" novalidate ng-show="!submitted">
             <div class="input-field">
