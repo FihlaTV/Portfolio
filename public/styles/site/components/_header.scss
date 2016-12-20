@@ -45,7 +45,7 @@ header{
         }
 
         .bicycle{
-            right: 300px;
+            right: px-to-rem(300px);
             transition: right $bike-animation-duration linear;
             .wheel{
                 animation: spin $bike-spin-duration ($bike-animation-duration / $bike-spin-duration) linear;
@@ -75,7 +75,7 @@ header{
                 .menu-button{
                     background-color: $color-white;
                     &:before,&:after{
-                        background-color: $color-white; 
+                        background-color: $color-white;
                     }
                 }
             }
@@ -93,7 +93,7 @@ header{
             transition: all $tranistion-duration ease-in-out;
             border-radius:2px;
             cursor:pointer;
-            &:before{
+            &:before,&:after{
                 content:'';
                 transition: all $tranistion-duration ease-in-out;
                 border-radius:2px;
@@ -101,16 +101,11 @@ header{
                 height:$line-height;
                 width: $line-width;
                 background-color:$color-secondary;
+            }
+            &:before{
                 top:-1 * $line-gap;
             }
             &:after{
-                content:'';
-                transition: all $tranistion-duration ease-in-out;
-                border-radius:2px;
-                position:absolute;
-                height:$line-height;
-                width: $line-width;
-                background-color:$color-secondary;
                 bottom:-1 * $line-gap;
             }
             &.close{
@@ -142,15 +137,22 @@ header{
             visibility: visible;
             transition: visibility 0s linear;
         }
-        .logo{
-            @include font-sans-serif(40px);
-            transform: scaleX(-1);
-            letter-spacing: -5px;
-            white-space: nowrap;
-            position: absolute;
-            right: 100px;
-            color:$color-primary-inverse;
-            display: inline-block;
-        }
     }
+    .logo{
+        @include font-sans-serif(40px);
+        line-height: px-to-rem(64px);
+        transform: scaleX(-1);
+        letter-spacing: -5px;
+        white-space: nowrap;
+        position: absolute;
+        right: 100px;
+        color:$color-primary-inverse;
+        display: inline-block;
+    }
+    @include bp-max($bp-between){
+        .logo{
+            line-height: px-to-rem(80px);
+
+        }
+    };
 }

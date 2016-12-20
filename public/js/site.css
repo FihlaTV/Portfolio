@@ -369,7 +369,7 @@ header {
       header.active .menu-button:after {
         bottom: -10.66667px; }
     header.active .bicycle {
-      right: 300px;
+      right: 18.75rem;
       transition: right 1.25s linear; }
       header.active .bicycle .wheel {
         animation: spin 0.25s 5 linear; }
@@ -407,23 +407,17 @@ header {
       transition: all 0.5s ease-in-out;
       border-radius: 2px;
       cursor: pointer; }
-      header nav .menu-button:before {
+      header nav .menu-button:before, header nav .menu-button:after {
         content: '';
         transition: all 0.5s ease-in-out;
         border-radius: 2px;
         position: absolute;
         height: 6px;
         width: 48px;
-        background-color: #F0C17D;
+        background-color: #F0C17D; }
+      header nav .menu-button:before {
         top: -16px; }
       header nav .menu-button:after {
-        content: '';
-        transition: all 0.5s ease-in-out;
-        border-radius: 2px;
-        position: absolute;
-        height: 6px;
-        width: 48px;
-        background-color: #F0C17D;
         bottom: -16px; }
       header nav .menu-button.close {
         height: 0; }
@@ -445,18 +439,22 @@ header {
     header .bicycle .spoke {
       visibility: visible;
       transition: visibility 0s linear; }
-    header .bicycle .logo {
-      font-family: "Noto Sans";
-      font-weight: 400;
-      font-style: normal;
-      font-size: 2.5rem;
-      transform: scaleX(-1);
-      letter-spacing: -5px;
-      white-space: nowrap;
-      position: absolute;
-      right: 100px;
-      color: #aa4c4c;
-      display: inline-block; }
+  header .logo {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    transform: scaleX(-1);
+    letter-spacing: -5px;
+    white-space: nowrap;
+    position: absolute;
+    right: 100px;
+    color: #aa4c4c;
+    display: inline-block; }
+  @media screen and (max-width: 768px) {
+    header .logo {
+      line-height: 5rem; } }
 
 @-webkit-keyframes spin {
   0% {
