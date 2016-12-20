@@ -4,6 +4,7 @@
         <div class="menu" ng-click="toggleMenu();">
             <span class="menu-button" ng-class="{'close':showMenu}"></span>
         </div>
+        {{> bicycle}}
     </nav>
     <div class="mobile-menu" ng-class="{'show':showMenu}">
         <ul>
@@ -12,5 +13,4 @@
             <li><a ng-click="scrollTo('about')" href="">Contact</a></li>
         </ul>
     </div>
-    {{> bicycle}}
 </header>
