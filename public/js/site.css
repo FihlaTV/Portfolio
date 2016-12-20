@@ -298,7 +298,6 @@ html {
 
 .hero {
   background-size: cover;
-  background-image: url("/images/background-two.jpg");
   background-position: left center;
   height: 100vh;
   overflow: hidden; }
@@ -430,6 +429,108 @@ header {
           transform: rotate(-45deg);
           bottom: -.4rem;
           background-color: #fff; }
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+
+.bicycle {
+  width: 96px;
+  height: 60px;
+  background-color: transparent;
+  display: inline-block;
+  position: relative; }
+  .bicycle .wheel {
+    border: solid 1.2px black;
+    height: 33.33333px;
+    width: 33.33333px;
+    border-radius: 33.33333px;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    animation: spin 0.5s infinite linear; }
+    .bicycle .wheel.front {
+      right: 0; }
+    .bicycle .wheel.back {
+      left: 0; }
+  .bicycle .spoke {
+    position: absolute;
+    bottom: 0;
+    height: 33.33333px;
+    width: 1px;
+    background-color: black;
+    left: 16.66667px; }
+    .bicycle .spoke.first {
+      transform: rotate(25deg); }
+    .bicycle .spoke.second {
+      transform: rotate(155deg); }
+  .bicycle .gear {
+    border: solid 0.8px black;
+    height: 12.5px;
+    width: 12.5px;
+    border-radius: 12.5px;
+    position: absolute;
+    display: inline-block;
+    bottom: 10.41667px; }
+    .bicycle .gear.big {
+      left: 41.33333px; }
+    .bicycle .gear.small {
+      height: 4.16667px;
+      width: 4.16667px;
+      left: 14.58333px;
+      bottom: 14.58333px; }
+  .bicycle .bar {
+    position: absolute;
+    background-color: black; }
+  .bicycle .bottom.bar {
+    width: 30.91667px;
+    height: 1px;
+    left: 16.66667px;
+    bottom: 16.66667px; }
+  .bicycle .left.bar {
+    left: 16.66667px;
+    bottom: 16.66667px;
+    width: 1px;
+    height: 30.50643px;
+    transform: rotate(20deg);
+    transform-origin: bottom; }
+  .bicycle .middle-left.bar {
+    left: 47.58333px;
+    bottom: 16.66667px;
+    width: 1px;
+    height: 34.99554px;
+    transform: rotate(-35deg);
+    transform-origin: bottom; }
+  .bicycle .top.bar {
+    left: 26.47124px;
+    bottom: 45.33333px;
+    height: 1px;
+    width: 42px; }
+  .bicycle .middle-right.bar {
+    left: 47.58333px;
+    bottom: 16.66667px;
+    width: 1px;
+    height: 34.99554px;
+    transform: rotate(35deg);
+    transform-origin: bottom; }
+  .bicycle .right.bar {
+    right: 16.66667px;
+    bottom: 16.66667px;
+    width: 1px;
+    height: 38px;
+    transform: rotate(-20deg);
+    transform-origin: bottom; }
+  .bicycle .seat {
+    position: absolute;
+    display: inline-block;
+    left: 20.47124px;
+    bottom: 45.33333px;
+    width: 12px;
+    height: 0.4px;
+    border: solid 1.71429px black;
+    border-radius: 1.71429px; }
 
 .mobile-menu {
   background-size: cover;

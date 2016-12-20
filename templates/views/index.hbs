@@ -1,5 +1,6 @@
 {{!< default}}
-<section class="hero" style="background-image:url({{data.home.backgroundImage.url}})">
+<!-- <section class="hero" style="background-image:url({{data.home.backgroundImage.url}})"> -->
+<section class="hero">
 	<div class="hero-content">
 		<div class="logo"></div>
 		<h1>Emmanuel Nelson</h1>
@@ -9,9 +10,9 @@
 
 </section>
 <section class="work" id="work">
-	{{#each data.home.work}}
+	<!-- {{#each data.home.work}}
 		{{> work this}}
-	{{/each}}
+	{{/each}} -->
 </section>
 <section class="section about" id="about">
 	<div class="panel about-panel">
@@ -45,4 +46,7 @@
         </form>
 		<p ng-show="submitted">Your message has been sent! Thanks for reaching out.</p>
     </div>
+</section>
+<section class="section">
+	
 </section>
