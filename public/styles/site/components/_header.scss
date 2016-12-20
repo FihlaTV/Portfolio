@@ -17,7 +17,9 @@ header{
         $icon-color: $color-primary-inverse;
         $background-color: lighten($color-secondary,10%);
         height:$header-height / $menu-shrink-ratio + 6px;
-        background-image:linear-gradient(270deg, rgba($background-color,.7),  rgba($background-color,0.99));
+        //background-image:linear-gradient(270deg, rgba($background-color,.7),  rgba($background-color,0.99));
+        background-color: rgba($background-color,0.99);
+        background-image: none;
         .menu{
             height: $menu-button-height / $menu-shrink-ratio;
             width: $menu-button-width / $menu-shrink-ratio;
@@ -41,15 +43,23 @@ header{
                 bottom: -1 * $line-gap / $menu-shrink-ratio
             }
         }
+
+        .bicycle{
+            right: 300px;
+            transition: right $bike-animation-duration linear;
+            .wheel{
+                animation: spin $bike-spin-duration ($bike-animation-duration / $bike-spin-duration) linear;
+            }
+            .spoke{
+                visibility: hidden;
+                transition: visibility 0s linear $bike-animation-duration;
+            }
+        }
     }
     nav{
         position: relative;
         z-index: 100;
         height: 100%;
-        .logo{
-            display:none;
-            float:left;
-        }
         .menu{
             height:$menu-button-height;
             position:relative;
@@ -119,5 +129,28 @@ header{
             }
         }
 
+    }
+    .bicycle{
+        position: absolute;
+        right: -100px;
+        top: 0;
+        visibility: visible;
+        transition: right 0s linear;
+        overflow: visible;
+        .spoke{
+            //hide spokes once animation complete
+            visibility: visible;
+            transition: visibility 0s linear;
+        }
+        .logo{
+            @include font-sans-serif(40px);
+            transform: scaleX(-1);
+            letter-spacing: -5px;
+            white-space: nowrap;
+            position: absolute;
+            right: 100px;
+            color:$color-primary-inverse;
+            display: inline-block;
+        }
     }
 }

@@ -348,7 +348,8 @@ header {
   background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5)); }
   header.active {
     height: 59.33333px;
-    background-image: linear-gradient(270deg, rgba(245, 215, 171, 0.7), rgba(245, 215, 171, 0.99)); }
+    background-color: rgba(245, 215, 171, 0.99);
+    background-image: none; }
     header.active .menu {
       height: 40px;
       width: 42.66667px;
@@ -367,13 +368,18 @@ header {
         top: -10.66667px; }
       header.active .menu-button:after {
         bottom: -10.66667px; }
+    header.active .bicycle {
+      right: 300px;
+      transition: right 1.25s linear; }
+      header.active .bicycle .wheel {
+        animation: spin 0.25s 5 linear; }
+      header.active .bicycle .spoke {
+        visibility: hidden;
+        transition: visibility 0s linear 1.25s; }
   header nav {
     position: relative;
     z-index: 100;
     height: 100%; }
-    header nav .logo {
-      display: none;
-      float: left; }
     header nav .menu {
       height: 60px;
       position: relative;
@@ -429,6 +435,130 @@ header {
           transform: rotate(-45deg);
           bottom: -.4rem;
           background-color: #fff; }
+  header .bicycle {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    visibility: visible;
+    transition: right 0s linear;
+    overflow: visible; }
+    header .bicycle .spoke {
+      visibility: visible;
+      transition: visibility 0s linear; }
+    header .bicycle .logo {
+      font-family: "Noto Sans";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 2.5rem;
+      transform: scaleX(-1);
+      letter-spacing: -5px;
+      white-space: nowrap;
+      position: absolute;
+      right: 100px;
+      color: #aa4c4c;
+      display: inline-block; }
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+
+.bicycle {
+  width: 90px;
+  height: 57.6px;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  transform: scaleX(-1); }
+  .bicycle .wheel {
+    border: solid 1.152px #3c3c3c;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    position: absolute;
+    display: inline-block;
+    bottom: 0; }
+    .bicycle .wheel.front {
+      right: 0; }
+    .bicycle .wheel.back {
+      left: 0; }
+  .bicycle .spoke {
+    position: absolute;
+    bottom: 0;
+    height: 32px;
+    width: 1px;
+    background-color: #3c3c3c;
+    left: 16px; }
+    .bicycle .spoke.first {
+      transform: rotate(25deg); }
+    .bicycle .spoke.second {
+      transform: rotate(155deg); }
+  .bicycle .gear {
+    border: solid 0.768px #3c3c3c;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    position: absolute;
+    display: inline-block;
+    bottom: 10px; }
+    .bicycle .gear.big {
+      left: 39.68px; }
+    .bicycle .gear.small {
+      height: 4px;
+      width: 4px;
+      left: 14px;
+      bottom: 14px; }
+  .bicycle .bar {
+    position: absolute;
+    background-color: #3c3c3c; }
+  .bicycle .bottom.bar {
+    width: 29.68px;
+    height: 0.96px;
+    left: 16px;
+    bottom: 16px; }
+  .bicycle .left.bar {
+    left: 16px;
+    bottom: 16px;
+    width: 0.96px;
+    height: 29.28617px;
+    transform: rotate(20deg);
+    transform-origin: bottom; }
+  .bicycle .middle-left.bar {
+    left: 45.68px;
+    bottom: 16px;
+    width: 0.96px;
+    height: 33.59572px;
+    transform: rotate(-35deg);
+    transform-origin: bottom; }
+  .bicycle .top.bar {
+    left: 25.41239px;
+    bottom: 43.52px;
+    height: 0.96px;
+    width: 40.32px; }
+  .bicycle .middle-right.bar {
+    left: 45.68px;
+    bottom: 16px;
+    width: 0.96px;
+    height: 33.59572px;
+    transform: rotate(35deg);
+    transform-origin: bottom; }
+  .bicycle .right.bar {
+    right: 16px;
+    bottom: 16px;
+    width: 0.96px;
+    height: 36.48px;
+    transform: rotate(-20deg);
+    transform-origin: bottom; }
+  .bicycle .seat {
+    position: absolute;
+    display: inline-block;
+    left: 19.65239px;
+    bottom: 43.52px;
+    width: 11.52px;
+    height: 0.384px;
+    border: solid 1.64571px #3c3c3c;
+    border-radius: 1.64571px; }
 
 .mobile-menu {
   background-size: cover;
