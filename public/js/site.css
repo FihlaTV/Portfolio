@@ -298,7 +298,6 @@ html {
 
 .hero {
   background-size: cover;
-  background-image: url("/images/background-two.jpg");
   background-position: left center;
   height: 100vh;
   overflow: hidden; }
