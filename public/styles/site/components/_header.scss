@@ -1,10 +1,10 @@
 header{
     $header-height:80px;
-    $menu-button-height:60px;
-    $menu-button-width:64px;
-    $line-width:48px;
-    $line-height:6px;
-    $line-gap: 16px;
+    $menu-button-height:50px;
+    $menu-button-width:54px;
+    $line-width:40px;
+    $line-height:4px;
+    $line-gap: 10px;
     $tranistion-duration: 0.5s;
     position:fixed;
     top:0;
@@ -17,7 +17,6 @@ header{
         $icon-color: $color-primary-inverse;
         $background-color: lighten($color-secondary,10%);
         height:$header-height / $menu-shrink-ratio + 6px;
-        //background-image:linear-gradient(270deg, rgba($background-color,.7),  rgba($background-color,0.99));
         background-color: rgba($background-color,0.99);
         background-image: none;
         .menu{
@@ -67,7 +66,7 @@ header{
             margin-left:20px;
             width:$menu-button-width;
             border:solid 2px $color-secondary;
-            border-radius:8px;
+            //border-radius:8px;
             cursor: pointer;
             top: 14px;
             transition: height $tranistion-duration ease-in-out, width $tranistion-duration ease-in-out;
@@ -91,12 +90,10 @@ header{
             margin:0 auto;
             bottom:-($menu-button-height/2) + ($line-height/2);
             transition: all $tranistion-duration ease-in-out;
-            border-radius:2px;
             cursor:pointer;
             &:before,&:after{
                 content:'';
                 transition: all $tranistion-duration ease-in-out;
-                border-radius:2px;
                 position:absolute;
                 height:$line-height;
                 width: $line-width;

@@ -1,7 +1,5 @@
 .rich-text {
-
-	font-size: px-to-rem(17px);
-
+	@include font-serif(22px);
 	p {
 		margin: 1em 0;
 		@include font-serif(22px);
@@ -23,7 +21,7 @@
 		}
 
 	}
-	
+
 	@include bp-max($bp-mobile) {
 		font-size: 1em;
 	}
