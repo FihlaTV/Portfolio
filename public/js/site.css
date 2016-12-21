@@ -371,12 +371,14 @@ header {
         top: -6.66667px; }
       header.active .menu-button:after {
         bottom: -6.66667px; }
-    header.active .bicycle {
-      right: 18.75rem;
+      header.active .menu-button.close:after {
+        bottom: -0.3rem; }
+    header.active .bicycle-container {
+      right: 1.25rem;
       transition: right 1.25s linear; }
-      header.active .bicycle .wheel {
+      header.active .bicycle-container .bicycle .wheel {
         animation: spin 0.25s 5 linear; }
-      header.active .bicycle .spoke {
+      header.active .bicycle-container .bicycle .spoke {
         visibility: hidden;
         transition: visibility 0s linear 1.25s; }
   header nav {
@@ -393,10 +395,6 @@ header {
       cursor: pointer;
       top: 14px;
       transition: height 0.5s ease-in-out, width 0.5s ease-in-out; }
-      header nav .menu:hover .menu-button {
-        background-color: #fff; }
-        header nav .menu:hover .menu-button:before, header nav .menu:hover .menu-button:after {
-          background-color: #fff; }
     header nav .menu-button {
       content: '';
       height: 4px;
@@ -429,14 +427,15 @@ header {
           transform: rotate(-45deg);
           bottom: -.4rem;
           background-color: #fff; }
-  header .bicycle {
+  header .bicycle-container {
     position: absolute;
-    right: -100px;
+    right: -23.75rem;
     top: 0;
     visibility: visible;
     transition: right 0s linear;
-    overflow: visible; }
-    header .bicycle .spoke {
+    overflow: visible;
+    display: flex; }
+    header .bicycle-container .bicycle .spoke {
       visibility: visible;
       transition: visibility 0s linear; }
   header .logo {
@@ -445,13 +444,11 @@ header {
     font-style: normal;
     font-size: 2.5rem;
     line-height: 4rem;
-    transform: scaleX(-1);
     letter-spacing: -5px;
     white-space: nowrap;
-    position: absolute;
-    right: 100px;
     color: #aa4c4c;
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 0.625rem; }
   @media screen and (max-width: 768px) {
     header .logo {
       line-height: 5rem; } }

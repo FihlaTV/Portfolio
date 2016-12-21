@@ -41,17 +41,24 @@ header{
             &:after{
                 bottom: -1 * $line-gap / $menu-shrink-ratio
             }
+            &.close{
+                &:after{
+                    bottom: -0.3rem;
+                }
+            }
         }
 
-        .bicycle{
-            right: px-to-rem(300px);
+        .bicycle-container{
+            right: px-to-rem(20px);
             transition: right $bike-animation-duration linear;
-            .wheel{
-                animation: spin $bike-spin-duration ($bike-animation-duration / $bike-spin-duration) linear;
-            }
-            .spoke{
-                visibility: hidden;
-                transition: visibility 0s linear $bike-animation-duration;
+            .bicycle{
+                .wheel{
+                    animation: spin $bike-spin-duration ($bike-animation-duration / $bike-spin-duration) linear;
+                }
+                .spoke{
+                    visibility: hidden;
+                    transition: visibility 0s linear $bike-animation-duration;
+                }
             }
         }
     }
@@ -70,14 +77,6 @@ header{
             cursor: pointer;
             top: 14px;
             transition: height $tranistion-duration ease-in-out, width $tranistion-duration ease-in-out;
-            &:hover{
-                .menu-button{
-                    background-color: $color-white;
-                    &:before,&:after{
-                        background-color: $color-white;
-                    }
-                }
-            }
 
         }
         .menu-button{
@@ -122,34 +121,34 @@ header{
         }
 
     }
-    .bicycle{
+    .bicycle-container{
         position: absolute;
-        right: -100px;
+        right: px-to-rem(-380px);
         top: 0;
         visibility: visible;
         transition: right 0s linear;
         overflow: visible;
-        .spoke{
-            //hide spokes once animation complete
-            visibility: visible;
-            transition: visibility 0s linear;
+        display: flex;
+        .bicycle{
+            .spoke{
+                //hide spokes once animation complete
+                visibility: visible;
+                transition: visibility 0s linear;
+            }
         }
     }
     .logo{
         @include font-sans-serif(40px);
         line-height: px-to-rem(64px);
-        transform: scaleX(-1);
         letter-spacing: -5px;
         white-space: nowrap;
-        position: absolute;
-        right: 100px;
         color:$color-primary-inverse;
         display: inline-block;
+        margin-left: px-to-rem(10px);
     }
     @include bp-max($bp-between){
         .logo{
             line-height: px-to-rem(80px);
-
         }
     };
 }

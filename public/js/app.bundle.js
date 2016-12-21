@@ -1661,8 +1661,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 var app = angular.module('portfolio', ['ngTouch','duScroll']).run(function ($rootScope) {
 	$rootScope.currentLanguage = "english";
 
-	$rootScope.goToUrl = function(url){
-		window.location = url;
+	$rootScope.goToUrl = function(url,target){
+		if(target == 'blank')
+			window.open(url);
+		else
+			window.location = url;
 	}
 });
 
