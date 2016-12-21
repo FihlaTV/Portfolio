@@ -32,12 +32,13 @@ keystone.init({
 	'emails': 'templates/emails',
 
 	'auto update': false,
-	'session': true,
 	'auth': true,
 	'user model': 'N',
 	'cookie secret': 'I8J8PQCTi(X7_k~*[O:(P*4;^c(TB*n4Cx0#u,4D/FwJgVN7Ja>|1~FrWD+y/<@,'
 
 });
+
+keystone.set('session store','mongo');
 
 
 // Load your project's Models
