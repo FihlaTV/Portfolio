@@ -3,7 +3,7 @@
 	<div class="hero-content">
 		<div class="logo"></div>
 		<h1>Emmanuel Nelson</h1>
-		<div class="spacer"></div>
+		<!-- <div class="spacer"></div> -->
 		<h3><span>Front-End</span><span>Node</span><span>.NET Developer</span></h3>
 	</div>
 
@@ -16,12 +16,16 @@
 <section class="section about" id="about">
 	<div class="panel about-panel">
 		<h2>About</h2>
-		{{{data.home.about}}}
+		<div class="rich-text">
+			{{{data.home.about}}}
+		</div>
         <h4>Some (Older) Work</h4>
-        <ul>
-            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
-            <li><a href="https://github.com/manuelnelson/AudioLibraryJs">Audio Waveforms/Player with WebAPI</a></li>
-        </ul>
+		<div class="rich-text">
+	        <ul>
+	            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
+	            <li><a href="https://github.com/manuelnelson/AudioLibraryJs">Audio Waveforms/Player with WebAPI</a></li>
+	        </ul>
+		</div>
     </div>
 	<div class="panel contact-panel" ng-controller="ContactController">
         <h2>Contact</h2>

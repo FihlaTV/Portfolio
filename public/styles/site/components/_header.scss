@@ -1,10 +1,10 @@
 header{
     $header-height:80px;
-    $menu-button-height:60px;
-    $menu-button-width:64px;
-    $line-width:48px;
-    $line-height:6px;
-    $line-gap: 16px;
+    $menu-button-height:50px;
+    $menu-button-width:54px;
+    $line-width:40px;
+    $line-height:4px;
+    $line-gap: 10px;
     $tranistion-duration: 0.5s;
     position:fixed;
     top:0;
@@ -17,7 +17,6 @@ header{
         $icon-color: $color-primary-inverse;
         $background-color: lighten($color-secondary,10%);
         height:$header-height / $menu-shrink-ratio + 6px;
-        //background-image:linear-gradient(270deg, rgba($background-color,.7),  rgba($background-color,0.99));
         background-color: rgba($background-color,0.99);
         background-image: none;
         .menu{
@@ -42,17 +41,24 @@ header{
             &:after{
                 bottom: -1 * $line-gap / $menu-shrink-ratio
             }
+            &.close{
+                &:after{
+                    bottom: -0.3rem;
+                }
+            }
         }
 
-        .bicycle{
-            right: px-to-rem(300px);
+        .bicycle-container{
+            right: px-to-rem(20px);
             transition: right $bike-animation-duration linear;
-            .wheel{
-                animation: spin $bike-spin-duration ($bike-animation-duration / $bike-spin-duration) linear;
-            }
-            .spoke{
-                visibility: hidden;
-                transition: visibility 0s linear $bike-animation-duration;
+            .bicycle{
+                .wheel{
+                    animation: spin $bike-spin-duration ($bike-animation-duration / $bike-spin-duration) linear;
+                }
+                .spoke{
+                    visibility: hidden;
+                    transition: visibility 0s linear $bike-animation-duration;
+                }
             }
         }
     }
@@ -67,18 +73,10 @@ header{
             margin-left:20px;
             width:$menu-button-width;
             border:solid 2px $color-secondary;
-            border-radius:8px;
+            //border-radius:8px;
             cursor: pointer;
             top: 14px;
             transition: height $tranistion-duration ease-in-out, width $tranistion-duration ease-in-out;
-            &:hover{
-                .menu-button{
-                    background-color: $color-white;
-                    &:before,&:after{
-                        background-color: $color-white;
-                    }
-                }
-            }
 
         }
         .menu-button{
@@ -91,12 +89,10 @@ header{
             margin:0 auto;
             bottom:-($menu-button-height/2) + ($line-height/2);
             transition: all $tranistion-duration ease-in-out;
-            border-radius:2px;
             cursor:pointer;
             &:before,&:after{
                 content:'';
                 transition: all $tranistion-duration ease-in-out;
-                border-radius:2px;
                 position:absolute;
                 height:$line-height;
                 width: $line-width;
@@ -125,34 +121,34 @@ header{
         }
 
     }
-    .bicycle{
+    .bicycle-container{
         position: absolute;
-        right: -100px;
+        right: px-to-rem(-380px);
         top: 0;
         visibility: visible;
         transition: right 0s linear;
         overflow: visible;
-        .spoke{
-            //hide spokes once animation complete
-            visibility: visible;
-            transition: visibility 0s linear;
+        display: flex;
+        .bicycle{
+            .spoke{
+                //hide spokes once animation complete
+                visibility: visible;
+                transition: visibility 0s linear;
+            }
         }
     }
     .logo{
         @include font-sans-serif(40px);
         line-height: px-to-rem(64px);
-        transform: scaleX(-1);
         letter-spacing: -5px;
         white-space: nowrap;
-        position: absolute;
-        right: 100px;
         color:$color-primary-inverse;
         display: inline-block;
+        margin-left: px-to-rem(10px);
     }
     @include bp-max($bp-between){
         .logo{
             line-height: px-to-rem(80px);
-
         }
     };
 }

@@ -10,11 +10,13 @@
     .panel{
         display: inline-block;
         padding: 0 $panel-padding;
-        width: $panel-width; 
+        width: $panel-width;
         min-height: 200px;
     }
     .about-panel{
-        font-size: px-to-rem(18px);
+        h4{
+            margin-top: px-to-rem(20px);
+        }
         ul{
             padding-left: px-to-rem(30px);
             li{
@@ -29,7 +31,6 @@
         }
     }
     .contact-panel{
-        border-left: solid 2px $color-secondary;
         input,textarea{
             background:white;
             width:100%;
