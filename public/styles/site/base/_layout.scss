@@ -15,4 +15,13 @@ html{
 #footer {
 	margin-top: 30px;
 	padding-top: 30px;
-  }
+}
+.content-wrapper{
+    margin: 0 px-to-rem($layout-side-margin-desktop);
+    @media (max-width: $bp-between){
+        margin: 0 px-to-rem($layout-side-margin-tablet);
+    }
+    @media (max-width: $bp-mobile){
+        margin: 0 px-to-rem($layout-side-margin-mobile);
+    }
+}

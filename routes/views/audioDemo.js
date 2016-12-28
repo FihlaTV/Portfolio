@@ -9,9 +9,9 @@ exports = module.exports = function(req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'Audio';
- 
+
 
 	// Render the view
-	view.render('audio-demo');
+	view.render('audio-demo',{layout: 'player.hbs'});
 
 };

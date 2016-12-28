@@ -47,6 +47,12 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 //small-spacing
 $default-spacing: 10px;
 
+//sizing
+$header-height:80px;
+$layout-side-margin-desktop: 60px;
+$layout-side-margin-tablet: 40px;
+$layout-side-margin-mobile: 20px;
+
 //breakpoints
 $bp-tablet: 1024px;
 $bp-between: 768px;

@@ -1,1 +1,241 @@
 {{!< player}}
+<div class="content-wrapper">
+    <div class="player">
+        <div class="track">
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+        </div>
+        <div class="track">
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+        </div>
+        <div class="track">
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+        </div>
+        <div class="track">
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+        </div>
+        <div class="track">
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+        </div>
+        <div class="track">
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1 measure">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+            <div class="span1">
+            </div>
+        </div>
+    </div>
+    <div class="span5" id="player-controls">
+        <button class="btn btn-primary" id="playerPlay">
+            Play <i class="icon-play icon-white"></i>
+        </button>
+        <button class="btn btn-primary" id="playerStop">
+            Stop <i class="icon-stop icon-white"></i>
+        </button>
+        <!-- @Html.Action("GetSaveButton","Player", true) -->
+        <button class="btn btn-primary pull-right" id="playerReset">
+            Clear <i class="icon-trash icon-white"></i>
+        </button>
+    </div>
+
+    <div class="audio-viewer">
+        <div id="waveformSample" data-waveform="true">Drag to player when finished.</div>
+        <div id="audioViewer" class="viewer">
+            <canvas id="sampleTrim" data-processing-sources="/js/jquery/trim.pde"></canvas>
+            <canvas id="sampleWaveform" data-processing-sources="/js/jquery/waveform.pde"></canvas>
+            <canvas id="samplePlayIndex" data-processing-sources="/js/jquery/tracker.pde"></canvas>
+        </div>
+        <div id="audioViewerControls">
+            <button class="btn btn-mini btn-primary" id="samplePlay" title="Play/Stop">
+                <i class="icon-play icon-white"></i>
+            </button>
+            <button class="btn btn-mini btn-primary" id="sampleZoomIn" title="Zoom In">
+                <i class="icon-zoom-in icon-white"></i>
+            </button>
+            <button class="btn btn-mini btn-primary" id="sampleZoomOut" title="Zoom Out">
+                <i class="icon-zoom-out icon-white"></i>
+            </button>
+        </div>
+    </div>
+</div>

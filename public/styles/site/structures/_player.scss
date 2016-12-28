@@ -1,0 +1,22 @@
+.player{
+    overflow-x: auto;
+    width: 100%;
+    margin-top: $header-height;
+    $numberOfSpans: 16;
+    $span-width-unit: 100% / $numberOfSpans;
+    $track-height:40px;
+    $outline-width: 1px;
+    .track{
+        display: flex;
+        background-color: $color-off-white;
+        height: $track-height;
+        flex-flow: row;
+        margin-top: $outline-width;
+    }
+    .span1{
+        width: $span-width-unit;
+        background-color: $color-primary;
+        margin-right: $outline-width;
+        height: $track-height;
+    }
+}

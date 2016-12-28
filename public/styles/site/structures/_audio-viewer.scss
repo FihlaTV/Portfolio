@@ -1,0 +1,48 @@
+.audio-viewer{
+    margin-top: 100px;
+    $viewer-width: 99.9%;
+    $viewer-height: 200px;
+    .viewer{
+        background-color: $color3;
+    }
+    #waveformSample{
+        margin-top:10px;
+        width:100%;
+        background-color: $color-primary-inverse;
+    }
+    .ui-draggable:hover{
+        cursor:pointer;
+    }
+    #audioViewer{
+        margin: 4px auto 0;
+        overflow: hidden;
+        width:100%;
+        height:206px;
+    }
+    #sampleTrim {
+        height:$viewer-height;
+        width:$viewer-width;
+        float: left;
+        position: relative;
+        z-index:6;
+    }
+    #sampleTrim.over{
+        background-color: #fff;
+    }
+    #sampleWaveform {
+        height:$viewer-height;
+        width:$viewer-width;
+        position: relative;
+        float: left;
+        top: -1* $viewer-height;
+        z-index:4;
+    }
+    #samplePlayIndex {
+        height:$viewer-height;
+        width:$viewer-width;
+        float: left;
+        position: relative;
+        top: -2 * $viewer-height;
+        z-index:5;
+    }
+}

@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
+var webpack = require('webpack');
 var loaders = [
   {
     loader: 'css-loader',
@@ -10,10 +11,13 @@ var loaders = [
 ];
 module.exports = function(){
     return {
-        entry: './public/js/app/main.js',
+        entry: {
+            main:'./public/js/app/main.js',
+            player: './public/js/app/player.js'
+        },
         output: {
             path: './public/js',
-            filename: 'app.bundle.js'
+            filename: '[name].bundle.js'
         },
         module: {
             loaders: [
@@ -36,7 +40,13 @@ module.exports = function(){
         },
         devtool: 'source-map',
         plugins: [
-            new ExtractTextPlugin("site.css")
+            new ExtractTextPlugin("site.css"),
+            new webpack.ProvidePlugin({
+               'jQuery': 'jquery',
+               '$': 'jquery',
+               'global.jQuery': 'jquery',
+               '_':'underscore'
+           })
         ]
 
      };
