@@ -250,3 +250,17 @@ Mashup.GetFormInput = function (formName) {
     });
     return model;
 };
+Mashup.authorizeSpotify = function(callback){
+    $.ajax({
+        method: 'POST',
+        url:'https://accounts.spotify.com/api/token',
+        data:{
+            client_id:'f97cf546e894427bbc7148c362b4fe63',
+            client_secret:'3243959c067c4b0d8e19d7b3536a267b',
+            grant_type:'client_credentials'
+        }
+    }).done(function(response){
+        Mashup.accessToken = response.access_token;
+        callback();
+    })
+}

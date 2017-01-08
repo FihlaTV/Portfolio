@@ -11737,10 +11737,10 @@ https://github.com/addyosmani/jquery-plugin-patterns/blob/master/jquery.widget-f
         getMP3MetaData: function(result){
             var dv = new jDataView(result);
             if (dv.getString(3, dv.byteLength - 128) == 'TAG') {
-                var title = dv.getString(30, dv.tell());
-                var artist = dv.getString(30, dv.tell());
-                var album = dv.getString(30, dv.tell());
-                var year = dv.getString(4, dv.tell());
+                var title = encodeURIComponent(dv.getString(30, dv.tell())).replace(/%00/g,'');
+                var artist = encodeURIComponent(dv.getString(30, dv.tell())).replace(/%00/g,'');
+                var album = encodeURIComponent(dv.getString(30, dv.tell())).replace(/%00/g,'');
+                var year = encodeURIComponent(dv.getString(4, dv.tell())).replace(/%00/g,'');
                 var sampleOptions = {
                     fileName: title,
                     sampleName: title,
@@ -11750,8 +11750,22 @@ https://github.com/addyosmani/jquery-plugin-patterns/blob/master/jquery.widget-f
                     trimStart: 0,
                     playDuration: 2
                 }
-
-                $(Mashup.properties.iDTags.waveformSample).attr('data-sample-options',JSON.stringify(sampleOptions).replace(/\\u0000/g, ''));
+                Mashup.authorizeSpotify(function(){
+                    //get track
+                    var url = 'https://api.spotify.com/v1/search?q=' + artist +' '+ title + '&type=track';
+                    $.getJSON(url,function(response){
+                        if(response.tracks && response.tracks.items && response.tracks.items.length > 0){
+                            $.ajax({
+                                url: 'https://api.spotify.com/v1/audio-features/' + response.tracks.items[0].id,
+                                method:'GET',
+                                headers: {'Authorization': 'Bearer ' + Mashup.accessToken}
+                            }).done(function(track){
+                                sampleOptions.bpm = track.tempo;                                
+                                $(Mashup.properties.iDTags.waveformSample).attr('data-sample-options',JSON.stringify(sampleOptions).replace(/\\u0000/g, ''));
+                            });
+                        }
+                    })
+                });
             }
         },
         getSampleBuffer: function () {
@@ -11779,11 +11793,6 @@ https://github.com/addyosmani/jquery-plugin-patterns/blob/master/jquery.widget-f
             var data = buffer.getChannelData(0);
             data.set(equalizedArray);
             return buffer;
-            // this.$audioPlayer.audioPlayerWaveformViewer('getContext').decodeAudioData(equalizedArray,function(buffer){
-            //     callback(buffer);
-            //     //self.loadSampleFromArrayBuffer(buffer);
-            // })
-            // return equalizedArray;
             // var blob = new Blob([equalizedArray], { type: 'text/plain' });
             // return blob;
         },
@@ -12234,6 +12243,20 @@ Mashup.GetFormInput = function (formName) {
     });
     return model;
 };
+Mashup.authorizeSpotify = function(callback){
+    $.ajax({
+        method: 'POST',
+        url:'https://accounts.spotify.com/api/token',
+        data:{
+            client_id:'f97cf546e894427bbc7148c362b4fe63',
+            client_secret:'3243959c067c4b0d8e19d7b3536a267b',
+            grant_type:'client_credentials'
+        }
+    }).done(function(response){
+        Mashup.accessToken = response.access_token;
+        callback();
+    })
+}
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(0)))
 
