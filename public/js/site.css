@@ -295,6 +295,24 @@ html {
     padding: 0 0 0 20px; }
     .rich-text ul li, .rich-text ol li {
       margin-bottom: 0.625rem; }
+  .rich-text.dark-background a {
+    color: #aa4c4c;
+    position: relative;
+    display: inline-block; }
+    .rich-text.dark-background a:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s;
+      background-color: #fff; }
+    .rich-text.dark-background a:hover {
+      color: #fff; }
+      .rich-text.dark-background a:hover:before {
+        width: 100%; }
   @media screen and (max-width: 480px) {
     .rich-text {
       font-size: 1em; } }
@@ -744,10 +762,6 @@ header {
     padding-left: 1.875rem; }
     .about .about-panel ul li {
       list-style-type: disc; }
-      .about .about-panel ul li a {
-        color: #aa4c4c; }
-        .about .about-panel ul li a:hover {
-          color: #fff; }
   .about .contact-panel input, .about .contact-panel textarea {
     background: white;
     width: 100%; }

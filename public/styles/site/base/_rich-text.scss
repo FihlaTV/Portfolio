@@ -21,7 +21,11 @@
 		}
 
 	}
-
+	&.dark-background{
+		a{
+			@include text-transition();
+	    }
+	}
 	@include bp-max($bp-mobile) {
 		font-size: 1em;
 	}

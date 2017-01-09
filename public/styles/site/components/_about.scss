@@ -21,12 +21,6 @@
             padding-left: px-to-rem(30px);
             li{
                 list-style-type: disc;
-                a{
-                    color: $color-primary-inverse;
-                    &:hover{
-                        color:$color-white;
-                    }
-                }
             }
         }
     }

@@ -16,38 +16,22 @@
 <section class="section about" id="about">
 	<div class="panel about-panel">
 		<h2>About</h2>
-		<div class="rich-text">
+		<div class="rich-text dark-background">
 			{{{data.home.about}}}
 		</div>
         <h4>Some (Older) Work</h4>
-		<div class="rich-text">
+		<div class="rich-text dark-background">
 	        <ul>
 	            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
 	            <li><a href="https://github.com/manuelnelson/AudioLibraryJs">Audio Waveforms/Player with WebAPI</a></li>
 	        </ul>
 		</div>
     </div>
-	<div class="panel contact-panel" ng-controller="ContactController">
+	<div class="panel contact-panel">
         <h2>Contact</h2>
-        <form name="form" novalidate ng-show="!submitted">
-            <div class="input-field">
-                <input type="text" placeholder="Name" name="name" ng-model="contact.name" required>
-                <span class="invalid" ng-show="form.name.$error.required && form.name.$touched">* This field is required</span>
-            </div>
-            <div class="input-field">
-                <input type="email" placeholder="Email" name="email" ng-model="contact.email" required>
-                <span class="invalid" ng-show="form.email.$error.required && form.email.$touched">* This field is required</span>
-                <span class="invalid" ng-show="form.email.$error.email && form.email.$touched">* Not a valid email address</span>
-            </div>
-            <div class="input-field">
-                <textarea rows="4" placeholder="Message" name="message" ng-model="contact.message" required></textarea>
-                <span class="invalid" ng-show="form.message.$error.required && form.message.$touched">* This field is required</span>
-            </div>
-            <div class="input-field">
-                <button class="submit-button" ng-click="submit()">Submit</button>
-            </div>
-        </form>
-		<p ng-show="submitted">Your message has been sent! Thanks for reaching out.</p>
+		<div class="rich-text dark-background">
+			{{{data.home.contact}}}
+		</div>
     </div>
 </section>
 <section class="section">

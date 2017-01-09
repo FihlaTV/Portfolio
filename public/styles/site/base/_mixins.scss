@@ -34,7 +34,29 @@
 @mixin transition($property: all, $timing: $transition-timing) {
 	transition: $property #{$timing+ms} $transition-ease 0s;
 }
-
+@mixin text-transition($textColor:$color-primary-inverse, $hoverColor: $color-white) {
+    color: $color-primary-inverse;
+    position: relative;
+    display: inline-block;
+    $line-height:1px;
+    &:before{
+        content:"";
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: $line-height;
+        bottom: 0;
+        left:0;
+        transition: width 0.3s;
+        background-color:$color-white;
+    }
+    &:hover{
+        color:$color-white;
+        &:before{
+            width: 100%;
+        }
+    }
+}
 //Breakpoints
 @mixin bp-max($custom-px){
 	@media screen and (max-width: $custom-px){
