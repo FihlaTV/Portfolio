@@ -7,10 +7,12 @@ const webpack = require('webpack');
 const rootDir = path.resolve(__dirname, '..');
 
 module.exports = {
-    debug: true,
     devServer: {
         contentBase: path.resolve(rootDir, 'dist'),
-        port: 9000
+        port: 9000,
+        proxy: {
+          "/api": "http://localhost:3000" // proxy all api calls to proper dev port
+        }
     },
     devtool: 'source-map',
     entry: {
@@ -19,7 +21,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { loader: 'raw', test: /\.(css|html)$/ },
+            { loader: 'raw-loader', test: /\.(css|html)$/ },
             { exclude: /node_modules/, loader: 'ts', test: /\.ts$/ }
         ]
     },
@@ -36,10 +38,10 @@ module.exports = {
        new HtmlWebpack({
            filename: 'index.html',
            inject: 'body',
-           template: path.resolve(rootDir, 'src', 'app', 'index.html')
+           template: path.resolve(rootDir, 'src', 'index.html')
        })
    ],
    resolve: {
-       extensions: [ '', '.js', '.ts' ]
+       extensions: [ '.js', '.ts' ]
    }
 };
