@@ -1,7 +1,11 @@
 /**
  * Created by manny on 5/22/15.
  */
+<<<<<<< HEAD
+module.exports = function ($rootScope, $log, $window) {
+=======
 module.exports = function ($rootScope, $log, $window, $document) {
+>>>>>>> ede6fb27ceba744a8e1e795052733aa7aeb5b1cc
 	return {
 		restrict: 'A',
 		scope: true,
@@ -14,9 +18,18 @@ module.exports = function ($rootScope, $log, $window, $document) {
 			}
 			scope.offset = attrs.offset || 0;
 			scope.scrollTo = function (divName) {
+<<<<<<< HEAD
+				var gotoY = $('#' + divName).offset().top - scope.offset;
+
+				scope.toggleMenu(function(){
+					// using jquery to animate
+					$('html, body').animate({ scrollTop: gotoY }, 800);
+				});
+=======
 				scope.showMenu = !scope.showMenu;
 				var scrollElement = angular.element(document.getElementById(divName));
     			$document.scrollToElement(scrollElement, scope.offset, 800);
+>>>>>>> ede6fb27ceba744a8e1e795052733aa7aeb5b1cc
 			};
 		}
 	};

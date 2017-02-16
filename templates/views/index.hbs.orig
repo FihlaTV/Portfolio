@@ -20,12 +20,19 @@
 			{{{data.home.about}}}
 		</div>
         <h4>Some (Older) Work</h4>
+<<<<<<< HEAD
+        <ul>
+            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
+            <li><a href="https://github.com/manuelnelson/AudioLibraryJs">Audio Waveforms/Player with WebAPI</a></li>
+        </ul>
+=======
 		<div class="rich-text dark-background">
 	        <ul>
 	            <li><a href="https://github.com/manuelnelson/BoilerPlateMVC">ASP.NET MVC Boiler Plate Solution</a></li>
 	            <li><a href="https://github.com/manuelnelson/AudioLibraryJs">Audio Waveforms/Player with WebAPI</a></li>
 	        </ul>
 		</div>
+>>>>>>> ede6fb27ceba744a8e1e795052733aa7aeb5b1cc
     </div>
 	<div class="panel contact-panel">
         <h2>Contact</h2>

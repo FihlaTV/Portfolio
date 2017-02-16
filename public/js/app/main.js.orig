@@ -1,7 +1,12 @@
 require('../../styles/site.scss');
 
+<<<<<<< HEAD
+require('jquery');
+require('angular');
+=======
 require('angular');
 require('angular-scroll');
+>>>>>>> ede6fb27ceba744a8e1e795052733aa7aeb5b1cc
 require('angular-touch');
 require('underscore');
 require('./app.js');

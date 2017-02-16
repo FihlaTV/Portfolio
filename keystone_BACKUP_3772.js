@@ -38,8 +38,11 @@ keystone.init({
 
 });
 
+<<<<<<< HEAD
+=======
 keystone.set('session store','mongo');
 
+>>>>>>> ede6fb27ceba744a8e1e795052733aa7aeb5b1cc
 
 // Load your project's Models
 

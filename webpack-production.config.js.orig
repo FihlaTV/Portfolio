@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+//var ExtractTextPlugin = require("extract-text-webpack-plugin");
+module.exports = {
+    entry: './public/js/app/main.js',
+    output: {
+        path: './public/js',
+        filename: 'app.bundle.js'
+    },
+    module: {
+        loaders: [
+           {
+              test: /\.scss$/,
+              //loader: ExtractTextPlugin.extract("style", "css!sass"),
+              loader: "style-loader!css-loader!sass-loader",
+              exclude: /node_modules/
+           }
+       ],
+    },
+    // plugins: [
+    //     new ExtractTextPlugin("site.css")
+    // ]
+
+ };
+=======
  module.exports = function(){
      return {
          entry: './public/js/app/main.js',
@@ -30,3 +54,4 @@
 
       };
  }
+>>>>>>> ede6fb27ceba744a8e1e795052733aa7aeb5b1cc
