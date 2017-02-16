@@ -3,8 +3,16 @@
 const HtmlWebpack = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const rootDir = path.resolve(__dirname, '..');
+const loaders = [
+  {
+    loader: 'css-loader',
+  },
+  {
+    loader: 'sass-loader'
+  }
+];
 
 module.exports = {
     devServer: {
@@ -22,6 +30,14 @@ module.exports = {
     module: {
         loaders: [
             { loader: 'raw-loader', test: /\.(css|html)$/ },
+            {
+               test: /\.scss$/,
+               exclude: /node_modules/,
+               loader: ExtractTextPlugin.extract({
+                   fallbackLoader: 'style-loader',
+                   loader: loaders,
+               }),
+           },
             { exclude: /node_modules/, loader: 'ts', test: /\.ts$/ }
         ]
     },
@@ -39,9 +55,10 @@ module.exports = {
            filename: 'index.html',
            inject: 'body',
            template: path.resolve(rootDir, 'src', 'index.html')
-       })
+       }),
+       new ExtractTextPlugin("site.css")
    ],
    resolve: {
-       extensions: [ '.js', '.ts' ]
+       extensions: [ '.js', '.ts','.scss' ]
    }
 };

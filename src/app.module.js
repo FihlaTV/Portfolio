@@ -15,7 +15,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 // import { FormService } from './services/form.service';
 // import { FauxFormsService } from './services/in-memory.service';
 // import { RestService } from './services/rest.service';
-var components_1 = require("./components");
+var _1 = require("./components/");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,8 +23,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        bootstrap: [components_1.AppComponent],
-        declarations: [components_1.AppComponent],
+        bootstrap: [_1.AppComponent],
+        declarations: [_1.AppComponent],
         imports: [
             platform_browser_1.BrowserModule,
             http_1.HttpModule

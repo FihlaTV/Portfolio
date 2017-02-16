@@ -11,23 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.forms = null;
-        this.selectedForm = null;
-        // constructor(private formService: FormService, private restService: RestService) {
-        //     restService.getForms().subscribe((forms: FormData[]) => {
-        //         this.formService.setForms(forms);
-        //         this.forms = this.formService.getAllForms();
-        //     });
-        // }
-        // selectForm(formId: number) {
-        //     this.selectedForm = this.formService.getForm(formId);
-        // }
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: 'dynamic-form-app',
+        selector: 'home-app',
         template: require('./app.component.html')
     }),
     __metadata("design:paramtypes", [])

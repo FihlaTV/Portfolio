@@ -44,7 +44,7 @@ exports = module.exports = function(app) {
 	//app.all('/contact', routes.views.contact);
 
 	app.all('/api/contact', routes.api.contact);
-	app.get('/api/works', routes.api.works);
+	app.get('/api/homes', routes.api.homes);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

@@ -10,7 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {
     AppComponent
-} from './components';
+} from './components/';
 
 @NgModule({
     bootstrap: [ AppComponent ],
