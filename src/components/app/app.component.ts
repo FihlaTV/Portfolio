@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
+import { RestService } from '../../services/rest.service';
+import { Home } from '../../models';
 
 @Component({
     selector: 'home-app',
     template: require('./app.component.html')
 })
 export class AppComponent {
-    // forms: FormData[] = null;
+    home: Home;
     // selectedForm: FormData = null;
 
-    // constructor(private formService: FormService, private restService: RestService) {
-    //     restService.getForms().subscribe((forms: FormData[]) => {
-    //         this.formService.setForms(forms);
-    //         this.forms = this.formService.getAllForms();
-    //     });
-    // }
+    constructor(private restService: RestService) {
+        restService.getHome().subscribe((home: Home) => {
+            this.home = home;
+            console.log(this.home);
+        });
+    }
 
     // selectForm(formId: number) {
     //     this.selectedForm = this.formService.getForm(formId);

@@ -14,7 +14,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { FormService } from './services/form.service';
 // import { FauxFormsService } from './services/in-memory.service';
-// import { RestService } from './services/rest.service';
+var rest_service_1 = require("./services/rest.service");
 var _1 = require("./components/");
 var AppModule = (function () {
     function AppModule() {
@@ -29,6 +29,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule
         ],
+        providers: [rest_service_1.RestService]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

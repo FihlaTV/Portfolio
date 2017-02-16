@@ -30,6 +30,9 @@ node_modules
 //remove admin file
 *admins.js
 
+src/**/*.js
+src/**/*.js.map
+
 public/bower_components
 
 .idea

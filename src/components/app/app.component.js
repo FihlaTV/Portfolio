@@ -9,8 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var rest_service_1 = require("../../services/rest.service");
 var AppComponent = (function () {
-    function AppComponent() {
+    // selectedForm: FormData = null;
+    function AppComponent(restService) {
+        var _this = this;
+        this.restService = restService;
+        restService.getHome().subscribe(function (home) {
+            _this.home = home;
+            console.log(_this.home);
+        });
     }
     return AppComponent;
 }());
@@ -19,7 +27,7 @@ AppComponent = __decorate([
         selector: 'home-app',
         template: require('./app.component.html')
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [rest_service_1.RestService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
