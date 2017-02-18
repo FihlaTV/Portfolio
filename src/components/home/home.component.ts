@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RestService } from '../../services/rest.service';
 import { Home } from '../../models';
-
+// import {WorkComponent} from './work/work.component';
 @Component({
     selector: 'home-app',
-    template: require('./app.component.html')
+    template: require('./home.component.html')
 })
-export class AppComponent {
+export class HomeComponent {
     home: Home;
     // selectedForm: FormData = null;
 
@@ -17,7 +17,4 @@ export class AppComponent {
         });
     }
 
-    // selectForm(formId: number) {
-    //     this.selectedForm = this.formService.getForm(formId);
-    // }
 }

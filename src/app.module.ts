@@ -9,12 +9,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RestService } from './services/rest.service';
 
 import {
-    AppComponent
+    HomeComponent, WorkComponent
 } from './components/';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
-    declarations: [ AppComponent ],
+    bootstrap: [ HomeComponent, WorkComponent ],
+    declarations: [ HomeComponent, WorkComponent ],
     imports: [
         BrowserModule,
         HttpModule
