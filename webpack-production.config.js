@@ -10,15 +10,15 @@
                  {
                     test: /\.js$/,
                     include:[path.resolve(__dirname, 'app')],
-                    loader: 'ng-annotate',
+                    use: 'ng-annotate',
                     exclude: /node_modules/
                 },
                 {
                    test: /\.scss$/,
                    exclude: /node_modules/,
                    loader: ExtractTextPlugin.extract({
-                       fallbackLoader: 'style-loader',
-                       loader: loaders,
+                       fallback: 'style-loader',
+                       use: loaders,
                    }),
                 }
             ],

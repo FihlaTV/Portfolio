@@ -11,10 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
-//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { FormService } from './services/form.service';
-// import { FauxFormsService } from './services/in-memory.service';
+var ng2_simple_page_scroll_1 = require("ng2-simple-page-scroll");
 var rest_service_1 = require("./services/rest.service");
+var app_routing_1 = require("./app.routing");
 var _1 = require("./components/");
 var AppModule = (function () {
     function AppModule() {
@@ -23,11 +22,13 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        bootstrap: [_1.HomeComponent, _1.WorkComponent],
-        declarations: [_1.HomeComponent, _1.WorkComponent],
+        bootstrap: [_1.AppComponent],
+        declarations: [_1.HomeComponent, _1.WorkComponent, _1.NavigationComponent, _1.AppComponent],
         imports: [
             platform_browser_1.BrowserModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            app_routing_1.AppRoutingModule,
+            ng2_simple_page_scroll_1.Ng2SimplePageScrollModule.forRoot()
         ],
         providers: [rest_service_1.RestService]
     }),

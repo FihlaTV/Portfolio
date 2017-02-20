@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <base href="/" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,22 +14,6 @@
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:300,400,700|Rasa:300,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <header navigation offset="60" du-scrollspy="work" offset="200">
-        <nav>
-            <div class="menu" ng-click="toggleMenu();">
-                <span class="menu-button" ng-class="{'close':showMenu}"></span>
-            </div>
-            <!-- {{> bicycle}} -->
-        </nav>
-        <div class="mobile-menu" ng-class="{'show':showMenu}">
-            <ul>
-                <li><a ng-click="scrollTo('work')" href="">Work</a></li>
-                <li><a ng-click="scrollTo('about')" href="">About</a></li>
-                <li><a ng-click="scrollTo('contact')" href="">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <home-app>Loading...</home-app>
+    <app-component></app-component>
 </body>
 </html>

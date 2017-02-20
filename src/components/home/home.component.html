@@ -5,8 +5,8 @@
 		<h3><span>Front-End</span><span>Node</span><span>.NET Developer</span></h3>
 	</div>
 </section>
-<section class="work" id="work" *ngIf="home">
-	<work-tile *ngFor="let work of home.work" [work]="work" class="work-tile">
+<section class="work" id="work" >
+	<work-tile *ngFor="let work of home?.work" [work]="work" class="work-tile">
 	</work-tile>
 </section>
 <section class="section about" id="about">
@@ -22,9 +22,9 @@
 	        </ul>
 		</div>
     </div>
-	<div class="panel contact-panel">
+	<div class="panel contact-panel" id="contact">
         <h2>Contact</h2>
-		<div class="rich-text dark-background" [innerHTML]="home?.contact">			
+		<div class="rich-text dark-background" [innerHTML]="home?.contact">
 		</div>
     </div>
 </section>

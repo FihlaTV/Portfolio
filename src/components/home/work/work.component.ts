@@ -7,7 +7,6 @@ import { Work } from '../../../models';
 })
 export class WorkComponent {
     @Input() work: Work;
-    // selectedForm: FormData = null;
     showMore: boolean = false;
     constructor() {
     }
@@ -15,7 +14,7 @@ export class WorkComponent {
     readMore(){
         this.showMore = true;
     }
-    close(){        
+    close(){
         this.showMore = false;
     }
 }

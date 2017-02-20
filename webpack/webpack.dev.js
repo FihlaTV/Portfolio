@@ -18,6 +18,7 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(rootDir, 'dist'),
         port: 9000,
+        historyApiFallback: true,
         proxy: {
           "/api": "http://localhost:3000" // proxy all api calls to proper dev port
         }
@@ -34,8 +35,8 @@ module.exports = {
                test: /\.scss$/,
                exclude: /node_modules/,
                loader: ExtractTextPlugin.extract({
-                   fallbackLoader: 'style-loader',
-                   loader: loaders,
+                   fallback: 'style-loader',
+                   use: loaders,
                }),
            },
             { exclude: /node_modules/, loader: 'ts', test: /\.ts$/ }

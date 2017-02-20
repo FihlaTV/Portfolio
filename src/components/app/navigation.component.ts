@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { RestService } from '../../services/rest.service';
-import { Home } from '../../models';
 
 @Component({
-    selector: 'home-app',
-    template: require('./app.component.html')
+    selector: 'nav-menu',
+    template: require('./navigation.component.html')
 })
 export class NavigationComponent {
-
+    showMenu: boolean = false;
     constructor() {
     }
-
-    // selectForm(formId: number) {
-    //     this.selectedForm = this.formService.getForm(formId);
-    // }
+    toggleMenu(){
+        console.log('menu!')
+        this.showMenu = !this.showMenu;
+    }
 }

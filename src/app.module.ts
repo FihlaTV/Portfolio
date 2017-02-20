@@ -1,26 +1,26 @@
-import { NgModule } from '@angular/core';
+
+import { NgModule, OnInit } from '@angular/core';
+import { CommonModule }   from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-
-//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-
-// import { FormService } from './services/form.service';
-// import { FauxFormsService } from './services/in-memory.service';
+import {Ng2SimplePageScrollModule} from 'ng2-simple-page-scroll';
 import { RestService } from './services/rest.service';
+import { AppRoutingModule }  from './app.routing';
 
 import {
-    HomeComponent, WorkComponent
+    HomeComponent, WorkComponent, NavigationComponent, AppComponent
 } from './components/';
 
 @NgModule({
-    bootstrap: [ HomeComponent, WorkComponent ],
-    declarations: [ HomeComponent, WorkComponent ],
+    bootstrap: [ AppComponent ],
+    declarations: [ HomeComponent, WorkComponent, NavigationComponent, AppComponent],
     imports: [
         BrowserModule,
-        HttpModule
-        // InMemoryWebApiModule.forRoot(FauxFormsService),
-        // ReactiveFormsModule
+        HttpModule,
+        AppRoutingModule,
+        Ng2SimplePageScrollModule.forRoot()
     ],
     providers: [ RestService ]
 })
-export class AppModule {}
+export class AppModule{
+}
