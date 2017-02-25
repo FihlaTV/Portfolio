@@ -176,6 +176,14 @@
             .lead-content{
                 z-index: 100;
                 bottom:0;
+	  }
+	  .view{
+		a{
+		  visibility: visible;
+		  opacity:1;
+		}
+	  }
+	  
             }
             .view{
                 a{
