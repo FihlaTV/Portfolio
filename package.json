@@ -76,11 +76,13 @@
     "webpack-merge": "^3.0.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack/webpack.prod.js",
+    "start": "node keystone.js",
     "lint": "tslint ./src/**/*.ts",
     "test": "karma start ./karma/karma.conf.js",
     "test:headless": "karma start ./karma/karma.conf.js --browsers PhantomJS",
     "combine": "parallelshell \"npm run dev\" \"node keystone.js\"",
+    "build:dev":"webpack --env=dev --config ./webpack/webpack.dev.js",
+    "build:prod":"webpack --env=prod --config ./webpack/webpack.prod.js",
     "dev": "webpack-dev-server --config ./webpack/webpack.dev.js"
   },
   "main": "keystone.js"
