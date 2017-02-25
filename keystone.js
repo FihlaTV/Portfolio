@@ -16,7 +16,7 @@ keystone.init({
 	'brand': 'Portfolio',
 
 	'sass': 'public',
-	'static': 'public',
+	'static': ['public','dist'],
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',

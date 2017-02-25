@@ -7,54 +7,57 @@
         transition:all 0.3s ease-in-out;
         position:relative;
         z-index:2;
-        overflow:hidden;
-        &:before{
-            content: " ";
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            position: absolute;
-            transition: background-color 0.3s ease-in-out;
-        }
+        overflow: hidden;
         img{
             float:left;
             width:100%;
             height:100%;
         }
-        &:hover{
+        .tile-wrapper{
+            overflow:hidden;
             &:before{
-                background-color: transparent;
+                content: " ";
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                position: absolute;
+                transition: background-color 0.3s ease-in-out;
             }
-            .lead-content{
-                z-index: 100;
-                bottom:0;
+            &:hover{
+                &:before{
+                    background-color: transparent;
+                }
+                .lead-content{
+                    z-index: 100;
+                    bottom:0;
+                }
+                .view{
+                    a{
+                        visibility: visible;
+                        opacity:1;
+                    }
+                }
             }
-            .view{
-                a{
-                    visibility: visible;
+            &.show-more{
+                opacity: 1;
+                overflow:visible;
+                .lead-content{
+                    background-color:black;
                     opacity:1;
-                }
-            }
-        }
-        &.show-more{
-            opacity: 1;
-            overflow:visible;
-            .lead-content{
-                background-color:black;
-                opacity:1;
-                bottom:0;
-                height:100%;
-                padding:0;
-                z-index:10;
-                .close{
-                    display:inline-block;
-                }
-                .read-more{
-                    display:none;
-                }
-                .description,.company{
-                    visibility: visible;
-                    opacity: 1;
+                    bottom:0;
+                    height:100%;
+                    padding:0;
+                    z-index:10;
+                    .close{
+                        display:inline-block;
+                    }
+                    .read-more{
+                        display:none;
+                    }
+                    .description,.company{
+                        visibility: visible;
+                        opacity: 1;
+                    }
                 }
             }
         }

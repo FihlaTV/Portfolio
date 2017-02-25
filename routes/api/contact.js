@@ -15,7 +15,7 @@ exports = module.exports = function(req, res) {
 		contact
 	).save(function(err){
 			if (err) return res.status(500).json({ success: false, err: err });
-			
+
 			return res.json({success:true});
 		})
 };
