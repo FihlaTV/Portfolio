@@ -507,6 +507,7 @@ declare namespace NodeJS {
 
   export interface Env {
     PATH: string;
+    NODE_ENV: string;
     [key: string]: string;
   }
 

@@ -1,9 +1,8 @@
-
 import { NgModule, OnInit } from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import {Ng2SimplePageScrollModule} from 'ng2-simple-page-scroll';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { RestService } from './services/rest.service';
 import { AppRoutingModule }  from './app.routing';
 
@@ -18,7 +17,7 @@ import {
         BrowserModule,
         HttpModule,
         AppRoutingModule,
-        Ng2SimplePageScrollModule.forRoot()
+        Ng2PageScrollModule.forRoot()
     ],
     providers: [ RestService ]
 })

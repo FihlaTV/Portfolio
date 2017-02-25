@@ -6,9 +6,9 @@
 	</nav>
 	<div class="mobile-menu" [ngClass]="{'show':showMenu}">
 		<ul>
-			<li><a simplePageScroll href="#work">Work</a></li>
-			<li><a simplePageScroll href="#about">About</a></li>
-			<li><a simplePageScroll href="#contact">Contact</a></li>
+			<li><a pageScroll (click)="toggleMenu()" href="#work">Work</a></li>
+			<li><a pageScroll (click)="toggleMenu()" href="#about">About</a></li>
+			<li><a pageScroll (click)="toggleMenu()" href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </header>

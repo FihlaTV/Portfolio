@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
-var ng2_simple_page_scroll_1 = require("ng2-simple-page-scroll");
+var ng2_page_scroll_1 = require("ng2-page-scroll");
 var rest_service_1 = require("./services/rest.service");
 var app_routing_1 = require("./app.routing");
 var _1 = require("./components/");
@@ -28,7 +28,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
             app_routing_1.AppRoutingModule,
-            ng2_simple_page_scroll_1.Ng2SimplePageScrollModule.forRoot()
+            ng2_page_scroll_1.Ng2PageScrollModule.forRoot()
         ],
         providers: [rest_service_1.RestService]
     }),

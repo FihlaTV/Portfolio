@@ -36,8 +36,12 @@ var routes = {
 exports = module.exports = function(app) {
 
 	// Views
-	app.get('/', routes.views.index);
-	app.get('/audio-demo', routes.views.audioDemo);
+	keystone.redirect('/', '/index.html');
+	keystone.redirect('/home', '/index.html');
+
+	// app.get('/', routes.views.index);
+	// app.get('/home', routes.views.index);
+	//app.get('/audio-demo', routes.views.audioDemo);
 	//app.get('/blog/:category?', routes.views.blog);
 	//app.get('/blog/post/:post', routes.views.post);
 	//app.get('/gallery', routes.views.gallery);
